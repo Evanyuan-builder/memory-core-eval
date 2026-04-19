@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "memory-core-eval"
+version = "0.1.0"
+description = "Reproducible evaluation harness for agent memory systems (LongMemEval and beyond)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Evan Yuan" }]
+keywords = ["memory", "evaluation", "benchmark", "longmemeval", "agents", "retrieval"]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+]
+dependencies = [
+    "httpx>=0.25",
+    "huggingface-hub>=0.20",
+    "rank-bm25>=0.2.2",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dense = ["sentence-transformers>=2.2", "faiss-cpu>=1.7"]
+extras = ["mem0ai", "letta-client"]
+dev = ["pytest>=7", "pytest-asyncio>=0.21", "ruff>=0.1"]
+
+[project.scripts]
+mceval = "mceval.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Evanyuan-builder/memory-core-eval"
+Issues = "https://github.com/Evanyuan-builder/memory-core-eval/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mceval"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
