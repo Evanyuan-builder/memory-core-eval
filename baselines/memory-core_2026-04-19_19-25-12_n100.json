@@ -1,0 +1,3086 @@
+{
+  "meta": {
+    "timestamp": "2026-04-19T11:25:12.269616+00:00",
+    "adapter": "memory-core",
+    "dataset": "longmemeval-oracle",
+    "granularity": "turn-level",
+    "n_questions": 100,
+    "top_k_values": [
+      1,
+      5,
+      10
+    ],
+    "workers": 4,
+    "elapsed_s": 934.0
+  },
+  "metrics": {
+    "n_total": 100,
+    "n_answerable": 97,
+    "n_abstention": 3,
+    "overall": {
+      "recall@1": 100.0,
+      "recall@5": 100.0,
+      "recall@10": 100.0
+    },
+    "abstention": {
+      "precision@1": 100.0,
+      "precision@5": 100.0,
+      "precision@10": 100.0
+    },
+    "by_type": {
+      "knowledge-update": {
+        "n": 15,
+        "recall@1": 100.0,
+        "recall@5": 100.0,
+        "recall@10": 100.0
+      },
+      "multi-session": {
+        "n": 25,
+        "recall@1": 100.0,
+        "recall@5": 100.0,
+        "recall@10": 100.0
+      },
+      "single-session-assistant": {
+        "n": 11,
+        "recall@1": 100.0,
+        "recall@5": 100.0,
+        "recall@10": 100.0
+      },
+      "single-session-preference": {
+        "n": 6,
+        "recall@1": 100.0,
+        "recall@5": 100.0,
+        "recall@10": 100.0
+      },
+      "single-session-user": {
+        "n": 13,
+        "recall@1": 100.0,
+        "recall@5": 100.0,
+        "recall@10": 100.0
+      },
+      "temporal-reasoning": {
+        "n": 27,
+        "recall@1": 100.0,
+        "recall@5": 100.0,
+        "recall@10": 100.0
+      }
+    }
+  },
+  "results": [
+    {
+      "question_id": "01493427",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_a7b44747_1",
+        "answer_a7b44747_2"
+      ],
+      "retrieved_sessions": [
+        "answer_a7b44747_1",
+        "answer_a7b44747_2",
+        "answer_a7b44747_2",
+        "answer_a7b44747_1",
+        "answer_a7b44747_2",
+        "answer_a7b44747_1",
+        "answer_a7b44747_2",
+        "answer_a7b44747_2",
+        "answer_a7b44747_1",
+        "answer_a7b44747_1"
+      ],
+      "hypothesis": "I didn't know there were so many online communities dedicated to collecting and photography. I'll definitely check some of these out. By the way, speaking of my collection, I was wondering if you could help me generate a list of my postcards? I've added 17 new ones since I started collecting again, and I'd like to keep track of them.",
+      "error": null,
+      "elapsed_s": 21.27798533299938,
+      "extra": {}
+    },
+    {
+      "question_id": "07741c44",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_7e9ad7b4_1",
+        "answer_7e9ad7b4_2"
+      ],
+      "retrieved_sessions": [
+        "answer_7e9ad7b4_2",
+        "answer_7e9ad7b4_1",
+        "answer_7e9ad7b4_2",
+        "answer_7e9ad7b4_2",
+        "answer_7e9ad7b4_2",
+        "answer_7e9ad7b4_1",
+        "answer_7e9ad7b4_1",
+        "answer_7e9ad7b4_2",
+        "answer_7e9ad7b4_2",
+        "answer_7e9ad7b4_1"
+      ],
+      "hypothesis": "I'll definitely check out those brands and stores. Do you have any suggestions for a good cobbler to get my old sneakers polished and conditioned?",
+      "error": null,
+      "elapsed_s": 19.523307041992666,
+      "extra": {}
+    },
+    {
+      "question_id": "09ba9854",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_96c743d0_1",
+        "answer_96c743d0_2"
+      ],
+      "retrieved_sessions": [
+        "answer_96c743d0_2",
+        "answer_96c743d0_1",
+        "answer_96c743d0_2",
+        "answer_96c743d0_2",
+        "answer_96c743d0_1",
+        "answer_96c743d0_1",
+        "answer_96c743d0_2",
+        "answer_96c743d0_1",
+        "answer_96c743d0_1",
+        "answer_96c743d0_2"
+      ],
+      "hypothesis": "No, I'm pretty sure my friend said it's $10 to get from the airport to the hotel by train. Maybe it's a special deal or something? Can you just tell me how to get to my hotel from the airport by train then?",
+      "error": null,
+      "elapsed_s": 19.638815665995935,
+      "extra": {}
+    },
+    {
+      "question_id": "0e4e4c46",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_f2f998c7_1",
+        "answer_f2f998c7_2"
+      ],
+      "retrieved_sessions": [
+        "answer_f2f998c7_2",
+        "answer_f2f998c7_1",
+        "answer_f2f998c7_1",
+        "answer_f2f998c7_1",
+        "answer_f2f998c7_2",
+        "answer_f2f998c7_1",
+        "answer_f2f998c7_2",
+        "answer_f2f998c7_2",
+        "answer_f2f998c7_1",
+        "answer_f2f998c7_2"
+      ],
+      "hypothesis": "Building structures and trading resources is indeed a crucial part of the game. By the way, speaking of building and creating things, I just got my highest score in Ticket to Ride - 132 points! Anyway, back to Scythe... Do you want to know more about how to maximize your trade opportunities with other players?",
+      "error": null,
+      "elapsed_s": 21.34681349998573,
+      "extra": {}
+    },
+    {
+      "question_id": "0edc2aef",
+      "question_type": "single-session-preference",
+      "abstention": false,
+      "n_indexed": 20,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_d586e9cd"
+      ],
+      "retrieved_sessions": [
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd",
+        "answer_d586e9cd"
+      ],
+      "hypothesis": "I'm thinking of staying at The Edgewater Hotel, but I want to know more about the room service breakfast. Can I get a room service breakfast delivered to my room, and are there any options available that cater to my dietary restrictions?",
+      "error": null,
+      "elapsed_s": 16.754600540996762,
+      "extra": {}
+    },
+    {
+      "question_id": "129d1232",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 34,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_1de862d6_1",
+        "answer_1de862d6_2",
+        "answer_1de862d6_3"
+      ],
+      "retrieved_sessions": [
+        "answer_1de862d6_1",
+        "answer_1de862d6_2",
+        "answer_1de862d6_2",
+        "answer_1de862d6_1",
+        "answer_1de862d6_2",
+        "answer_1de862d6_2",
+        "answer_1de862d6_3",
+        "answer_1de862d6_3",
+        "answer_1de862d6_3",
+        "answer_1de862d6_2"
+      ],
+      "hypothesis": "I'm really interested in the \"big four\" you mentioned, especially reducing plastic bag usage. I've realized how often I've been using them for grocery shopping, and it's definitely an area I can improve on. By the way, I recently participated in a charity walk and managed to raise $250 through sponsors, which got me thinking about the impact of my daily habits on the community and environment.",
+      "error": null,
+      "elapsed_s": 28.177109875017777,
+      "extra": {}
+    },
+    {
+      "question_id": "15745da0",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_586de428"
+      ],
+      "retrieved_sessions": [
+        "answer_586de428",
+        "answer_586de428",
+        "answer_586de428",
+        "answer_586de428",
+        "answer_586de428",
+        "answer_586de428"
+      ],
+      "hypothesis": "I've been collecting vintage cameras for three months now, and I've already amassed a pretty impressive collection. Do you have any advice on how to keep my cameras organized and easily accessible for maintenance and cleaning?",
+      "error": null,
+      "elapsed_s": 8.512760332989274,
+      "extra": {}
+    },
+    {
+      "question_id": "18bc8abd",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_fff743f5_1",
+        "answer_fff743f5_2"
+      ],
+      "retrieved_sessions": [
+        "answer_fff743f5_2",
+        "answer_fff743f5_2",
+        "answer_fff743f5_2",
+        "answer_fff743f5_2",
+        "answer_fff743f5_2",
+        "answer_fff743f5_1",
+        "answer_fff743f5_1",
+        "answer_fff743f5_1",
+        "answer_fff743f5_1",
+        "answer_fff743f5_1"
+      ],
+      "hypothesis": "I'm thinking of hosting another backyard BBQ soon and I want to try out some new recipes. Can you give me some tips on how to make smoked brisket? By the way, I've been loving my new Weber gas grill for quick weeknight dinners, and I'm currently obsessed with Kansas City Masterpiece BBQ sauce on my ribs.",
+      "error": null,
+      "elapsed_s": 20.075181749998592,
+      "extra": {}
+    },
+    {
+      "question_id": "1903aded",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 2,
+      "n_retrieved": 2,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_sharegpt_hA7AkP3_0"
+      ],
+      "retrieved_sessions": [
+        "answer_sharegpt_hA7AkP3_0",
+        "answer_sharegpt_hA7AkP3_0"
+      ],
+      "hypothesis": "Brainstorm ideas for work from home jobs for seniors",
+      "error": null,
+      "elapsed_s": 0.08116920801694505,
+      "extra": {}
+    },
+    {
+      "question_id": "1c0ddc50",
+      "question_type": "single-session-preference",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_8da8c7e0"
+      ],
+      "retrieved_sessions": [
+        "answer_8da8c7e0",
+        "answer_8da8c7e0",
+        "answer_8da8c7e0",
+        "answer_8da8c7e0",
+        "answer_8da8c7e0",
+        "answer_8da8c7e0"
+      ],
+      "hypothesis": "I'm particularly interested in the history podcasts. Can you give me some recommendations on how to organize my listening schedule, considering my commute is about 40 minutes each way?",
+      "error": null,
+      "elapsed_s": 9.920906499988632,
+      "extra": {}
+    },
+    {
+      "question_id": "1d4da289",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 6,
+      "n_retrieved": 3,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ultrachat_348449"
+      ],
+      "retrieved_sessions": [
+        "answer_ultrachat_348449",
+        "answer_ultrachat_348449",
+        "answer_ultrachat_348449"
+      ],
+      "hypothesis": "What are some steps companies take to ensure data privacy and security for their customers?",
+      "error": null,
+      "elapsed_s": 5.037664458999643,
+      "extra": {}
+    },
+    {
+      "question_id": "2133c1b5",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_52382508_1",
+        "answer_52382508_2"
+      ],
+      "retrieved_sessions": [
+        "answer_52382508_1",
+        "answer_52382508_2",
+        "answer_52382508_2",
+        "answer_52382508_2",
+        "answer_52382508_2",
+        "answer_52382508_1",
+        "answer_52382508_2",
+        "answer_52382508_2",
+        "answer_52382508_1",
+        "answer_52382508_1"
+      ],
+      "hypothesis": "I'm still getting used to living in Tokyo, but I've been enjoying the independence of my new studio apartment in Harajuku - it's been a month now, and the commute to work is really convenient. Anyway, back to the trip - do you think it's better to book accommodations in Hakuba Valley or Matsumoto?",
+      "error": null,
+      "elapsed_s": 20.31300574998022,
+      "extra": {}
+    },
+    {
+      "question_id": "29f2956b",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_7cc5362f"
+      ],
+      "retrieved_sessions": [
+        "answer_7cc5362f",
+        "answer_7cc5362f",
+        "answer_7cc5362f",
+        "answer_7cc5362f",
+        "answer_7cc5362f",
+        "answer_7cc5362f"
+      ],
+      "hypothesis": "I'm looking to improve my guitar playing and was wondering if you could recommend some online resources for learning more about music theory and fingerpicking techniques. By the way, I've been practicing guitar for 30 minutes daily, and it's been helping me progress nicely.",
+      "error": null,
+      "elapsed_s": 10.229934874980245,
+      "extra": {}
+    },
+    {
+      "question_id": "29f2956b_abs",
+      "question_type": "single-session-user",
+      "abstention": true,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [],
+      "retrieved_sessions": [
+        "answer_7cc5362f_abs",
+        "answer_7cc5362f_abs",
+        "answer_7cc5362f_abs",
+        "answer_7cc5362f_abs",
+        "answer_7cc5362f_abs",
+        "answer_7cc5362f_abs"
+      ],
+      "hypothesis": "I'm excited to dive deeper into the world of guitar gear and effects pedals. I've been thinking about upgrading my setup to get a better sound for my jam sessions with Alex. Do you think I should consider getting a tube amp or a solid-state amp?",
+      "error": null,
+      "elapsed_s": 10.120012084022164,
+      "extra": {}
+    },
+    {
+      "question_id": "352ab8bd",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 15,
+      "n_retrieved": 4,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_sharegpt_NoDZzot_7"
+      ],
+      "retrieved_sessions": [
+        "answer_sharegpt_NoDZzot_7",
+        "answer_sharegpt_NoDZzot_7",
+        "answer_sharegpt_NoDZzot_7",
+        "answer_sharegpt_NoDZzot_7"
+      ],
+      "hypothesis": "proposed approach. Additionally, the use of synthetic data for training may limit the generalizability of the results to real-world scenarios.\n\nReviewer Confidence\n-------------------\n\nI have a low confidence in my review, as I am not an expert in the field of online domain adaptation for semantic segmentation. However, based on the provided information, it is clear that the proposed framework does not provide any meaningful improvements over existing approaches in terms of accuracy or efficiency.",
+      "error": null,
+      "elapsed_s": 11.817977083002916,
+      "extra": {}
+    },
+    {
+      "question_id": "370a8ff4",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_61d1be50_1",
+        "answer_61d1be50_2"
+      ],
+      "retrieved_sessions": [
+        "answer_61d1be50_2",
+        "answer_61d1be50_1",
+        "answer_61d1be50_1",
+        "answer_61d1be50_1",
+        "answer_61d1be50_1",
+        "answer_61d1be50_1",
+        "answer_61d1be50_2",
+        "answer_61d1be50_1",
+        "answer_61d1be50_2",
+        "answer_61d1be50_2"
+      ],
+      "hypothesis": "I'm planning my summer vacation and I was wondering if you could suggest some fun outdoor activities I can do at the beach besides swimming and beach volleyball? Oh, and by the way, I went on my 10th jog outdoors today, and it feels great to be back in shape after a harsh winter.",
+      "error": null,
+      "elapsed_s": 18.767349375004414,
+      "extra": {}
+    },
+    {
+      "question_id": "41698283",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_c7ddc051_1",
+        "answer_c7ddc051_2"
+      ],
+      "retrieved_sessions": [
+        "answer_c7ddc051_1",
+        "answer_c7ddc051_2",
+        "answer_c7ddc051_2",
+        "answer_c7ddc051_2",
+        "answer_c7ddc051_1",
+        "answer_c7ddc051_2",
+        "answer_c7ddc051_1",
+        "answer_c7ddc051_2",
+        "answer_c7ddc051_1",
+        "answer_c7ddc051_2"
+      ],
+      "hypothesis": "I'm mostly using my camera for portrait and low-light photography, so I think I'll need a bag that can protect my gear well. I've also been having some issues with my old 18-55mm kit lens, and I've been relying on manual focus lately. Speaking of lenses, I recently got a new 50mm prime lens, which has been working out great. Do you think either of these bags would be good for carrying my Nikon D5600 and a few lenses, including the 50mm prime?",
+      "error": null,
+      "elapsed_s": 20.332010124984663,
+      "extra": {}
+    },
+    {
+      "question_id": "4adc0475",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_6efce493_1",
+        "answer_6efce493_2"
+      ],
+      "retrieved_sessions": [
+        "answer_6efce493_1",
+        "answer_6efce493_2",
+        "answer_6efce493_2",
+        "answer_6efce493_2",
+        "answer_6efce493_2",
+        "answer_6efce493_1",
+        "answer_6efce493_1",
+        "answer_6efce493_2",
+        "answer_6efce493_2",
+        "answer_6efce493_1"
+      ],
+      "hypothesis": "I'm also playing in a recreational indoor soccer league, and I've scored 3 goals so far. Do you have any nutrition tips specifically for soccer players?",
+      "error": null,
+      "elapsed_s": 20.51439525000751,
+      "extra": {}
+    },
+    {
+      "question_id": "4b24c848",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_2cec623b_1",
+        "answer_2cec623b_2"
+      ],
+      "retrieved_sessions": [
+        "answer_2cec623b_2",
+        "answer_2cec623b_1",
+        "answer_2cec623b_1",
+        "answer_2cec623b_2",
+        "answer_2cec623b_1",
+        "answer_2cec623b_1",
+        "answer_2cec623b_1",
+        "answer_2cec623b_2",
+        "answer_2cec623b_2",
+        "answer_2cec623b_1"
+      ],
+      "hypothesis": "I'm planning to go to the mall this weekend and was wondering if there are any sales or promotions going on at H&M or Sephora that I should know about. By the way, I've already got five tops from H&M so far, and I'm thinking of getting a few more.",
+      "error": null,
+      "elapsed_s": 20.63986362502328,
+      "extra": {}
+    },
+    {
+      "question_id": "4f54b7c9",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_50940cb7_1",
+        "answer_50940cb7_2"
+      ],
+      "retrieved_sessions": [
+        "answer_50940cb7_1",
+        "answer_50940cb7_2",
+        "answer_50940cb7_2",
+        "answer_50940cb7_2",
+        "answer_50940cb7_2",
+        "answer_50940cb7_1",
+        "answer_50940cb7_2",
+        "answer_50940cb7_2",
+        "answer_50940cb7_1",
+        "answer_50940cb7_1"
+      ],
+      "hypothesis": "I'm trying to get my grandmother's vintage diamond necklace insured, but I'm not sure where to start. I inherited it recently, along with a few other family heirlooms, including an antique music box from my great-aunt and a set of depression-era glassware from my mom. Do you have any recommendations for insurance companies that specialize in insuring valuable items like these?",
+      "error": null,
+      "elapsed_s": 20.33453449999797,
+      "extra": {}
+    },
+    {
+      "question_id": "5025383b",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_688f9a3f_1",
+        "answer_688f9a3f_2"
+      ],
+      "retrieved_sessions": [
+        "answer_688f9a3f_2",
+        "answer_688f9a3f_2",
+        "answer_688f9a3f_2",
+        "answer_688f9a3f_1",
+        "answer_688f9a3f_1",
+        "answer_688f9a3f_1",
+        "answer_688f9a3f_1",
+        "answer_688f9a3f_2",
+        "answer_688f9a3f_2",
+        "answer_688f9a3f_1"
+      ],
+      "hypothesis": "I appreciate these tips! I've been trying to engage more with online communities related to cooking, and I want to make sure I'm doing it right. I've already joined a few online communities, which led me to engage in discussions about recipe techniques and share my thoughts on food-related posts.",
+      "error": null,
+      "elapsed_s": 20.148077290999936,
+      "extra": {}
+    },
+    {
+      "question_id": "51a45a95",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_d61669c7"
+      ],
+      "retrieved_sessions": [
+        "answer_d61669c7",
+        "answer_d61669c7",
+        "answer_d61669c7",
+        "answer_d61669c7",
+        "answer_d61669c7",
+        "answer_d61669c7"
+      ],
+      "hypothesis": "I actually redeemed a $5 coupon on coffee creamer last Sunday, which was a nice surprise since I didn't know I had it in my email inbox.",
+      "error": null,
+      "elapsed_s": 10.088955540995812,
+      "extra": {}
+    },
+    {
+      "question_id": "51c32626",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 20,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_58820c75_1",
+        "answer_58820c75_2"
+      ],
+      "retrieved_sessions": [
+        "answer_58820c75_1",
+        "answer_58820c75_2",
+        "answer_58820c75_1",
+        "answer_58820c75_1",
+        "answer_58820c75_2",
+        "answer_58820c75_1",
+        "answer_58820c75_2",
+        "answer_58820c75_2",
+        "answer_58820c75_2",
+        "answer_58820c75_1"
+      ],
+      "hypothesis": "I'm looking for some help with natural language processing tasks. I've done some work in this area, actually - my master's thesis was on NLP, and before that, I even worked on a research paper on sentiment analysis, which I submitted to ACL. Can you help me with text classification using machine learning?",
+      "error": null,
+      "elapsed_s": 16.93322716699913,
+      "extra": {}
+    },
+    {
+      "question_id": "54026fce",
+      "question_type": "single-session-preference",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_f7b22c66"
+      ],
+      "retrieved_sessions": [
+        "answer_f7b22c66",
+        "answer_f7b22c66",
+        "answer_f7b22c66",
+        "answer_f7b22c66",
+        "answer_f7b22c66",
+        "answer_f7b22c66"
+      ],
+      "hypothesis": "I'm looking for some suggestions on how to socialize with my colleagues. I enjoy the flexibility of working from home but miss social interactions and watercooler conversations with colleagues. Do you have any ideas?",
+      "error": null,
+      "elapsed_s": 10.025836916000117,
+      "extra": {}
+    },
+    {
+      "question_id": "57f827a0",
+      "question_type": "single-session-preference",
+      "abstention": false,
+      "n_indexed": 14,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_1bde8d3b"
+      ],
+      "retrieved_sessions": [
+        "answer_1bde8d3b",
+        "answer_1bde8d3b",
+        "answer_1bde8d3b",
+        "answer_1bde8d3b",
+        "answer_1bde8d3b",
+        "answer_1bde8d3b"
+      ],
+      "hypothesis": "I'm looking for some mid-century modern design inspiration for a new bedroom dresser to replace my new one, do you have any recommendations for websites or designers I should check out?",
+      "error": null,
+      "elapsed_s": 11.82252383400919,
+      "extra": {}
+    },
+    {
+      "question_id": "60036106",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_e552e1f9_1",
+        "answer_e552e1f9_2"
+      ],
+      "retrieved_sessions": [
+        "answer_e552e1f9_1",
+        "answer_e552e1f9_2",
+        "answer_e552e1f9_2",
+        "answer_e552e1f9_1",
+        "answer_e552e1f9_2",
+        "answer_e552e1f9_2",
+        "answer_e552e1f9_2",
+        "answer_e552e1f9_1",
+        "answer_e552e1f9_1",
+        "answer_e552e1f9_1"
+      ],
+      "hypothesis": "I'm looking to run another Facebook ad campaign soon and I want to make sure I'm targeting the right audience. Can you help me identify the most effective targeting options for my business? By the way, my previous ad campaign, which ran for five days, reached around 2,000 people.",
+      "error": null,
+      "elapsed_s": 20.389609707985073,
+      "extra": {}
+    },
+    {
+      "question_id": "66f24dbb",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 7,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_fea2e4d3"
+      ],
+      "retrieved_sessions": [
+        "answer_fea2e4d3",
+        "answer_fea2e4d3",
+        "answer_fea2e4d3",
+        "answer_fea2e4d3",
+        "answer_fea2e4d3",
+        "answer_fea2e4d3",
+        "answer_fea2e4d3"
+      ],
+      "hypothesis": "Here's a start - I've bought gifts for my sister's birthday, my mom, my neighbor Mrs. Johnson, coworkers, my best friend's baby shower, and my brother's new apartment.",
+      "error": null,
+      "elapsed_s": 8.719418125023367,
+      "extra": {}
+    },
+    {
+      "question_id": "681a1674",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_3be95d43_1",
+        "answer_3be95d43_2"
+      ],
+      "retrieved_sessions": [
+        "answer_3be95d43_2",
+        "answer_3be95d43_2",
+        "answer_3be95d43_2",
+        "answer_3be95d43_1",
+        "answer_3be95d43_1",
+        "answer_3be95d43_1",
+        "answer_3be95d43_1",
+        "answer_3be95d43_2",
+        "answer_3be95d43_1",
+        "answer_3be95d43_1"
+      ],
+      "hypothesis": "I'm trying to find some new movies to watch. I've been into Marvel movies lately, I also re-watched Spider-Man: No Way Home, which is another Marvel movie. Can you recommend some other superhero films that aren't from the Marvel universe?",
+      "error": null,
+      "elapsed_s": 18.715514125011396,
+      "extra": {}
+    },
+    {
+      "question_id": "6a1eabeb",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_a25d4a91_1",
+        "answer_a25d4a91_2"
+      ],
+      "retrieved_sessions": [
+        "answer_a25d4a91_2",
+        "answer_a25d4a91_2",
+        "answer_a25d4a91_1",
+        "answer_a25d4a91_2",
+        "answer_a25d4a91_1",
+        "answer_a25d4a91_2",
+        "answer_a25d4a91_2",
+        "answer_a25d4a91_1",
+        "answer_a25d4a91_1",
+        "answer_a25d4a91_1"
+      ],
+      "hypothesis": "I'm getting ready for a charity 5K run and I was wondering if you could give me some tips on how to improve my endurance. By the way, I'm hoping to beat my personal best time this time around.",
+      "error": null,
+      "elapsed_s": 20.50274550000904,
+      "extra": {}
+    },
+    {
+      "question_id": "6cb6f249",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_a4204937_1",
+        "answer_a4204937_2"
+      ],
+      "retrieved_sessions": [
+        "answer_a4204937_1",
+        "answer_a4204937_1",
+        "answer_a4204937_1",
+        "answer_a4204937_2",
+        "answer_a4204937_2",
+        "answer_a4204937_1",
+        "answer_a4204937_1",
+        "answer_a4204937_2",
+        "answer_a4204937_1",
+        "answer_a4204937_2"
+      ],
+      "hypothesis": "I'm thinking of setting a goal to limit my Instagram usage to 15 minutes a day, Monday to Friday. I've found that I often mindlessly scroll through Instagram during my breaks at work, and I'd like to reduce that. Do you think that's a good goal, and how can I set it up in Moment?",
+      "error": null,
+      "elapsed_s": 20.536163625016343,
+      "extra": {}
+    },
+    {
+      "question_id": "6d550036",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 44,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ec904b3c_1",
+        "answer_ec904b3c_2",
+        "answer_ec904b3c_3",
+        "answer_ec904b3c_4"
+      ],
+      "retrieved_sessions": [
+        "answer_ec904b3c_1",
+        "answer_ec904b3c_1",
+        "answer_ec904b3c_1",
+        "answer_ec904b3c_2",
+        "answer_ec904b3c_2",
+        "answer_ec904b3c_2",
+        "answer_ec904b3c_3",
+        "answer_ec904b3c_2",
+        "answer_ec904b3c_4",
+        "answer_ec904b3c_3"
+      ],
+      "hypothesis": "I'm working on a project that involves analyzing customer data to identify trends and patterns. I was thinking of using clustering analysis, but I'm not sure which type of clustering method to use. Can you help me decide between k-means and hierarchical clustering? By the way, I've had some experience with data analysis from my Marketing Research class project, where I led the data analysis team and we did a comprehensive market analysis for a new product launch.",
+      "error": null,
+      "elapsed_s": 41.32886900001904,
+      "extra": {}
+    },
+    {
+      "question_id": "71017277",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_0b4a8adc_1"
+      ],
+      "retrieved_sessions": [
+        "answer_0b4a8adc_1",
+        "answer_0b4a8adc_1",
+        "answer_0b4a8adc_1",
+        "answer_0b4a8adc_1",
+        "answer_0b4a8adc_1",
+        "answer_0b4a8adc_1"
+      ],
+      "hypothesis": "I'm looking for some advice on cleaning and maintaining my antique furniture. I recently acquired a beautiful vintage armchair from the 1950s and I want to make sure I'm taking good care of it. By the way, I also got a stunning crystal chandelier from my aunt today, which used to belong to my great-grandmother - it's got intricate etchings and sparkling droplets that catch the light. Do you have any general tips on how to dust and polish these types of pieces?",
+      "error": null,
+      "elapsed_s": 10.143969459022628,
+      "extra": {}
+    },
+    {
+      "question_id": "71a3fd6b",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 6,
+      "n_retrieved": 5,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ultrachat_417348"
+      ],
+      "retrieved_sessions": [
+        "answer_ultrachat_417348",
+        "answer_ultrachat_417348",
+        "answer_ultrachat_417348",
+        "answer_ultrachat_417348",
+        "answer_ultrachat_417348"
+      ],
+      "hypothesis": "Thanks for providing me with the contact details of the tourism board of Speyer. Can you tell me how I can get to Speyer from Frankfurt?",
+      "error": null,
+      "elapsed_s": 1.740075749985408,
+      "extra": {}
+    },
+    {
+      "question_id": "7527f7e2",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 4,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_7cb94507"
+      ],
+      "retrieved_sessions": [
+        "answer_7cb94507",
+        "answer_7cb94507",
+        "answer_7cb94507",
+        "answer_7cb94507"
+      ],
+      "hypothesis": "I think I'd like to start tracking my expenses. Can you recommend any good budgeting apps? I've been using my credit card a lot lately, and I'm pretty sure I spent a lot on luxury items last month. I remember buying a designer handbag for a pretty penny - $800, to be exact.",
+      "error": null,
+      "elapsed_s": 13.31003383299685,
+      "extra": {}
+    },
+    {
+      "question_id": "75499fd8",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 4,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_723bf11f"
+      ],
+      "retrieved_sessions": [
+        "answer_723bf11f",
+        "answer_723bf11f",
+        "answer_723bf11f",
+        "answer_723bf11f"
+      ],
+      "hypothesis": "I need help finding a good dog walker in my area. Do you have any recommendations or a list of services that can connect me with a reliable walker?",
+      "error": null,
+      "elapsed_s": 10.099659665982472,
+      "extra": {}
+    },
+    {
+      "question_id": "778164c6",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 8,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ultrachat_399000"
+      ],
+      "retrieved_sessions": [
+        "answer_ultrachat_399000",
+        "answer_ultrachat_399000",
+        "answer_ultrachat_399000",
+        "answer_ultrachat_399000",
+        "answer_ultrachat_399000",
+        "answer_ultrachat_399000",
+        "answer_ultrachat_399000",
+        "answer_ultrachat_399000"
+      ],
+      "hypothesis": "I don't have any personal preferences. however, escovitch fish is a classic and popular jamaican dish that many people love, so it might be a good one to try first. it's a combination of crispy fried snapper topped with a spicy and tangy pickled vegetable sauce, usually made with carrots, onion, bell peppers, and vinegar. the flavors are bold and vibrant, and it's a great way to experience the spicy and acidic flavors that are typical of caribbean cuisine.",
+      "error": null,
+      "elapsed_s": 6.77297145902412,
+      "extra": {}
+    },
+    {
+      "question_id": "7a8d0b71",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 5,
+      "n_retrieved": 2,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_sharegpt_i0tMT9q_9"
+      ],
+      "retrieved_sessions": [
+        "answer_sharegpt_i0tMT9q_9",
+        "answer_sharegpt_i0tMT9q_9"
+      ],
+      "hypothesis": "Great!! Can you write a detailed email marketing campaign that includes email examples for the retreats?",
+      "error": null,
+      "elapsed_s": 4.989451041998109,
+      "extra": {}
+    },
+    {
+      "question_id": "7e974930",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_c9f5693c_1",
+        "answer_c9f5693c_2"
+      ],
+      "retrieved_sessions": [
+        "answer_c9f5693c_2",
+        "answer_c9f5693c_2",
+        "answer_c9f5693c_1",
+        "answer_c9f5693c_1",
+        "answer_c9f5693c_2",
+        "answer_c9f5693c_2",
+        "answer_c9f5693c_1",
+        "answer_c9f5693c_2",
+        "answer_c9f5693c_1",
+        "answer_c9f5693c_2"
+      ],
+      "hypothesis": "I'm thinking of setting up a loyalty program to reward my repeat customers. Do you have any suggestions on how to implement it?\nBy the way, speaking of recent sales, I earned $420 at the Downtown Farmers Market on my most recent visit.",
+      "error": null,
+      "elapsed_s": 18.425427499983925,
+      "extra": {}
+    },
+    {
+      "question_id": "81507db6",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 58,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_da3c1266_1",
+        "answer_da3c1266_2",
+        "answer_da3c1266_3",
+        "answer_da3c1266_4",
+        "answer_da3c1266_5"
+      ],
+      "retrieved_sessions": [
+        "answer_da3c1266_1",
+        "answer_da3c1266_2",
+        "answer_da3c1266_5",
+        "answer_da3c1266_2",
+        "answer_da3c1266_1",
+        "answer_da3c1266_2",
+        "answer_da3c1266_4",
+        "answer_da3c1266_5",
+        "answer_da3c1266_4",
+        "answer_da3c1266_3"
+      ],
+      "hypothesis": "I'm looking into certification programs in digital marketing. Can you help me compare the pros and cons of online vs. in-person programs? Oh, and by the way, it's crazy how fast kids grow up - I just attended my little cousin Emma's preschool graduation about two months ago!",
+      "error": null,
+      "elapsed_s": 41.342418790998636,
+      "extra": {}
+    },
+    {
+      "question_id": "86b68151",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_dc11c1eb"
+      ],
+      "retrieved_sessions": [
+        "answer_dc11c1eb",
+        "answer_dc11c1eb",
+        "answer_dc11c1eb",
+        "answer_dc11c1eb",
+        "answer_dc11c1eb",
+        "answer_dc11c1eb"
+      ],
+      "hypothesis": "I just kind of went for it and started moving things around until it felt right. I wanted to create more space and make the room feel less cluttered. The new bookshelf is from IKEA, and I'm really happy with it. It's exactly what I needed to get my books organized.",
+      "error": null,
+      "elapsed_s": 8.365169374999823,
+      "extra": {}
+    },
+    {
+      "question_id": "88432d0a_abs",
+      "question_type": "multi-session",
+      "abstention": true,
+      "n_indexed": 48,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [],
+      "retrieved_sessions": [
+        "answer_733e443a_abs_1",
+        "answer_733e443a_abs_4",
+        "answer_733e443a_abs_2",
+        "answer_733e443a_abs_4",
+        "answer_733e443a_abs_2",
+        "answer_733e443a_abs_2",
+        "answer_733e443a_abs_3",
+        "answer_733e443a_abs_2",
+        "answer_733e443a_abs_3",
+        "answer_733e443a_abs_1"
+      ],
+      "hypothesis": "I think I'll stick with all-purpose flour for the tart crust, thanks for the advice! I've been using my new stand mixer nonstop since I got it a few weeks ago, and I'm sure it'll come in handy when making the crust.",
+      "error": null,
+      "elapsed_s": 36.542488291015616,
+      "extra": {}
+    },
+    {
+      "question_id": "8979f9ec",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_35e36341_1",
+        "answer_35e36341_2"
+      ],
+      "retrieved_sessions": [
+        "answer_35e36341_1",
+        "answer_35e36341_2",
+        "answer_35e36341_2",
+        "answer_35e36341_2",
+        "answer_35e36341_2",
+        "answer_35e36341_2",
+        "answer_35e36341_1",
+        "answer_35e36341_1",
+        "answer_35e36341_1",
+        "answer_35e36341_1"
+      ],
+      "hypothesis": "I'm looking for some new recipe ideas for using up leftover vegetables. I've been trying to reduce food waste and I want to get creative with what I have on hand. By the way, I just had the best lunch today - I finished off the last of my chicken fajitas with sautéed onions and bell peppers that I made last week. This is the third meal I got from my chicken fajitas.",
+      "error": null,
+      "elapsed_s": 18.12301425001351,
+      "extra": {}
+    },
+    {
+      "question_id": "8a137a7f",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_15d63a22"
+      ],
+      "retrieved_sessions": [
+        "answer_15d63a22",
+        "answer_15d63a22",
+        "answer_15d63a22",
+        "answer_15d63a22",
+        "answer_15d63a22",
+        "answer_15d63a22"
+      ],
+      "hypothesis": "I think I'll start with some warm white bulbs for my kitchen and see how that goes. I've been using a Philips LED bulb in my bedside lamp, and I really like the warm tone it provides.",
+      "error": null,
+      "elapsed_s": 9.983310917014023,
+      "extra": {}
+    },
+    {
+      "question_id": "8e9d538c",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_7bdcbd23"
+      ],
+      "retrieved_sessions": [
+        "answer_7bdcbd23",
+        "answer_7bdcbd23",
+        "answer_7bdcbd23",
+        "answer_7bdcbd23",
+        "answer_7bdcbd23",
+        "answer_7bdcbd23"
+      ],
+      "hypothesis": "What about the yarn I already have? Can I use some of my worsted weight yarn for the amigurumi toys? I have a stash of 17 skeins that I found recently, and I'd love to use them up.",
+      "error": null,
+      "elapsed_s": 10.07193395801005,
+      "extra": {}
+    },
+    {
+      "question_id": "95228167",
+      "question_type": "single-session-preference",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_5e613445"
+      ],
+      "retrieved_sessions": [
+        "answer_5e613445",
+        "answer_5e613445",
+        "answer_5e613445",
+        "answer_5e613445",
+        "answer_5e613445",
+        "answer_5e613445"
+      ],
+      "hypothesis": "I'm considering upgrading from a Fender Stratocaster to a Gibson Les Paul. Can you tell me the main differences between these two guitars?",
+      "error": null,
+      "elapsed_s": 10.048549625003943,
+      "extra": {}
+    },
+    {
+      "question_id": "a08a253f",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_47152166_1",
+        "answer_47152166_2"
+      ],
+      "retrieved_sessions": [
+        "answer_47152166_1",
+        "answer_47152166_2",
+        "answer_47152166_1",
+        "answer_47152166_1",
+        "answer_47152166_1",
+        "answer_47152166_1",
+        "answer_47152166_1",
+        "answer_47152166_2",
+        "answer_47152166_2",
+        "answer_47152166_2"
+      ],
+      "hypothesis": "I'm trying to plan out my week and was wondering if you could help me set reminders for my upcoming fitness classes. I attend Zumba classes on Tuesdays and Thursdays at 6:30 pm, and a weightlifting class on Saturdays at 10 am.",
+      "error": null,
+      "elapsed_s": 16.84861958300462,
+      "extra": {}
+    },
+    {
+      "question_id": "a1eacc2a",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_0eb23770_1",
+        "answer_0eb23770_2"
+      ],
+      "retrieved_sessions": [
+        "answer_0eb23770_1",
+        "answer_0eb23770_2",
+        "answer_0eb23770_2",
+        "answer_0eb23770_1",
+        "answer_0eb23770_2",
+        "answer_0eb23770_2",
+        "answer_0eb23770_2",
+        "answer_0eb23770_1",
+        "answer_0eb23770_2",
+        "answer_0eb23770_1"
+      ],
+      "hypothesis": "I like the idea of a writing calendar, especially since I've been enjoying writing short stories lately. Speaking of which, I was wondering, do you think it's a good idea to set a goal for a certain number of short stories per month? I've written four so far since I started writing regularly, and I'm hoping to keep the momentum going.",
+      "error": null,
+      "elapsed_s": 19.90212858299492,
+      "extra": {}
+    },
+    {
+      "question_id": "a2f3aa27",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 20,
+      "n_retrieved": 9,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_5126c02d_1",
+        "answer_5126c02d_2"
+      ],
+      "retrieved_sessions": [
+        "answer_5126c02d_1",
+        "answer_5126c02d_1",
+        "answer_5126c02d_1",
+        "answer_5126c02d_2",
+        "answer_5126c02d_1",
+        "answer_5126c02d_2",
+        "answer_5126c02d_2",
+        "answer_5126c02d_2",
+        "answer_5126c02d_2"
+      ],
+      "hypothesis": "I've been doing some of these already, like posting regularly and using a consistent aesthetic. It's great to know I'm on the right track. Speaking of which, I'm curious to know if there's a way to see which posts are performing well and which ones aren't. Do you know if Instagram Insights can help me with that? And by the way, I've got 1250 followers on Instagram now, so it'd be great to get some insights on how to optimize my content for them.",
+      "error": null,
+      "elapsed_s": 16.54904237500159,
+      "extra": {}
+    },
+    {
+      "question_id": "a3045048",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_016f6bd4_1",
+        "answer_016f6bd4_2"
+      ],
+      "retrieved_sessions": [
+        "answer_016f6bd4_2",
+        "answer_016f6bd4_1",
+        "answer_016f6bd4_1",
+        "answer_016f6bd4_2",
+        "answer_016f6bd4_2",
+        "answer_016f6bd4_1",
+        "answer_016f6bd4_1",
+        "answer_016f6bd4_1",
+        "answer_016f6bd4_2",
+        "answer_016f6bd4_2"
+      ],
+      "hypothesis": "I'm particularly interested in the Fossil Grant Chronograph Watch, can you tell me more about it? Also, I had a great time celebrating my best friend's 30th birthday party recently, it was on the 22nd of April, she loved the personalized photo album I got her.",
+      "error": null,
+      "elapsed_s": 18.49394775001565,
+      "extra": {}
+    },
+    {
+      "question_id": "a346bb18",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_4934b2d7_1",
+        "answer_4934b2d7_2"
+      ],
+      "retrieved_sessions": [
+        "answer_4934b2d7_2",
+        "answer_4934b2d7_2",
+        "answer_4934b2d7_1",
+        "answer_4934b2d7_2",
+        "answer_4934b2d7_1",
+        "answer_4934b2d7_1",
+        "answer_4934b2d7_2",
+        "answer_4934b2d7_1",
+        "answer_4934b2d7_1",
+        "answer_4934b2d7_2"
+      ],
+      "hypothesis": "I'm planning to start training for a triathlon two months later, and I was wondering if you could help me create a workout schedule that incorporates running, cycling, and swimming. Oh, and by the way, my target time for the marathon was 4 hours and 10 minutes, so I'm hoping to apply some of that endurance to my triathlon training.",
+      "error": null,
+      "elapsed_s": 22.223497917002533,
+      "extra": {}
+    },
+    {
+      "question_id": "a40e080f",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 8,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ultrachat_269020"
+      ],
+      "retrieved_sessions": [
+        "answer_ultrachat_269020",
+        "answer_ultrachat_269020",
+        "answer_ultrachat_269020",
+        "answer_ultrachat_269020",
+        "answer_ultrachat_269020",
+        "answer_ultrachat_269020"
+      ],
+      "hypothesis": "For sure! It's always a win-win when companies take care of their employees. It makes me feel better about supporting them as a customer. Do you know of any other companies that prioritize safety and well-being like Triumvirate?",
+      "error": null,
+      "elapsed_s": 3.8729415829875506,
+      "extra": {}
+    },
+    {
+      "question_id": "a9f6b44c",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 36,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_cc021f81_1",
+        "answer_cc021f81_2",
+        "answer_cc021f81_3"
+      ],
+      "retrieved_sessions": [
+        "answer_cc021f81_3",
+        "answer_cc021f81_3",
+        "answer_cc021f81_1",
+        "answer_cc021f81_1",
+        "answer_cc021f81_3",
+        "answer_cc021f81_1",
+        "answer_cc021f81_3",
+        "answer_cc021f81_3",
+        "answer_cc021f81_3",
+        "answer_cc021f81_1"
+      ],
+      "hypothesis": "I'm looking to plan a longer ride this weekend and was wondering if you could recommend some scenic bike routes in my area. By the way, my road bike has been running great since I cleaned and lubricated the chain on March 2nd - it's been shifting smoothly and quietly!",
+      "error": null,
+      "elapsed_s": 25.117543540982297,
+      "extra": {}
+    },
+    {
+      "question_id": "aae3761f",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 36,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_526354c8_1",
+        "answer_526354c8_2",
+        "answer_526354c8_3"
+      ],
+      "retrieved_sessions": [
+        "answer_526354c8_1",
+        "answer_526354c8_1",
+        "answer_526354c8_1",
+        "answer_526354c8_2",
+        "answer_526354c8_2",
+        "answer_526354c8_3",
+        "answer_526354c8_2",
+        "answer_526354c8_3",
+        "answer_526354c8_3",
+        "answer_526354c8_2"
+      ],
+      "hypothesis": "I think I'll go with Tybee Island. I've heard great things about the surfing there. By the way, I've had some experience with road trips to coastal towns, and I'm comfortable with the driving distance. My last trip to Outer Banks only took about four hours, so I'm sure I can handle the drive to Tybee Island.",
+      "error": null,
+      "elapsed_s": 30.43797208298929,
+      "extra": {}
+    },
+    {
+      "question_id": "af082822",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_b51b6115_1"
+      ],
+      "retrieved_sessions": [
+        "answer_b51b6115_1",
+        "answer_b51b6115_1",
+        "answer_b51b6115_1",
+        "answer_b51b6115_1",
+        "answer_b51b6115_1",
+        "answer_b51b6115_1"
+      ],
+      "hypothesis": "I'm actually going to be using the TV in my living room, and I think a full-motion mount would be perfect. I've been doing some shopping lately and scored some great deals, by the way. Yesterday, I attended a friends and family sale at Nordstrom and picked up a few dresses and tops for 20% off. I also got a $20 gift card for making a purchase over $100, which was a nice bonus. Anyway, back to the TV mount - what do you think about the Sanus VMF408? Is it a good option for my living room?",
+      "error": null,
+      "elapsed_s": 9.888763208000455,
+      "extra": {}
+    },
+    {
+      "question_id": "b46e15ee",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 48,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_4bfcc251_1",
+        "answer_4bfcc251_2",
+        "answer_4bfcc251_3",
+        "answer_4bfcc251_4"
+      ],
+      "retrieved_sessions": [
+        "answer_4bfcc251_1",
+        "answer_4bfcc251_1",
+        "answer_4bfcc251_4",
+        "answer_4bfcc251_3",
+        "answer_4bfcc251_2",
+        "answer_4bfcc251_3",
+        "answer_4bfcc251_1",
+        "answer_4bfcc251_1",
+        "answer_4bfcc251_1",
+        "answer_4bfcc251_2"
+      ],
+      "hypothesis": "I like the overnight oats idea. I've been doing a lot of charity events lately, and it's always great to have a healthy breakfast to start the day. Speaking of which, do you have any tips on how to stay hydrated during long walks like the \"Walk for Hunger\" event I did today?",
+      "error": null,
+      "elapsed_s": 37.038914041011594,
+      "extra": {}
+    },
+    {
+      "question_id": "b759caee",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 2,
+      "n_retrieved": 1,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_sharegpt_2BSXlAr_0"
+      ],
+      "retrieved_sessions": [
+        "answer_sharegpt_2BSXlAr_0"
+      ],
+      "hypothesis": "Write a blog post about guidance on how to buy a unique engagement rings direct from the designer, include examples of relevant designers and their instagram account",
+      "error": null,
+      "elapsed_s": 1.681262041995069,
+      "extra": {}
+    },
+    {
+      "question_id": "b86304ba",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 10,
+      "n_retrieved": 5,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_645b0329"
+      ],
+      "retrieved_sessions": [
+        "answer_645b0329",
+        "answer_645b0329",
+        "answer_645b0329",
+        "answer_645b0329",
+        "answer_645b0329"
+      ],
+      "hypothesis": "That's really helpful. I was thinking about my flea market find, and I realized that it's actually worth triple what I paid for it, which is amazing!",
+      "error": null,
+      "elapsed_s": 8.340008084021974,
+      "extra": {}
+    },
+    {
+      "question_id": "ba358f49",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_cbd08e3c_1",
+        "answer_cbd08e3c_2"
+      ],
+      "retrieved_sessions": [
+        "answer_cbd08e3c_1",
+        "answer_cbd08e3c_1",
+        "answer_cbd08e3c_2",
+        "answer_cbd08e3c_2",
+        "answer_cbd08e3c_2",
+        "answer_cbd08e3c_2",
+        "answer_cbd08e3c_1",
+        "answer_cbd08e3c_2",
+        "answer_cbd08e3c_1",
+        "answer_cbd08e3c_1"
+      ],
+      "hypothesis": "I'm looking for some advice on skincare routines for my age group. I've been noticing some fine lines and wrinkles lately, and I want to start taking better care of my skin. By the way, my friend Rachel's getting married next year, and it's got me thinking about my own life goals.",
+      "error": null,
+      "elapsed_s": 22.003032500011614,
+      "extra": {}
+    },
+    {
+      "question_id": "bc8a6e93",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_e6143162"
+      ],
+      "retrieved_sessions": [
+        "answer_e6143162",
+        "answer_e6143162",
+        "answer_e6143162",
+        "answer_e6143162",
+        "answer_e6143162",
+        "answer_e6143162"
+      ],
+      "hypothesis": "That's really helpful, thanks! I've actually had a lot of success with lemon-based desserts in the past - I recently made a lemon blueberry cake for my niece's birthday party and it was a huge hit. I was a bit nervous about how it would turn out, but the combination of the tangy lemon and sweet blueberries was perfect. Do you have any tips on how to get the perfect balance of flavors in a lemon dessert?",
+      "error": null,
+      "elapsed_s": 10.301119292009389,
+      "extra": {}
+    },
+    {
+      "question_id": "c960da58",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_e05e4612"
+      ],
+      "retrieved_sessions": [
+        "answer_e05e4612",
+        "answer_e05e4612",
+        "answer_e05e4612",
+        "answer_e05e4612",
+        "answer_e05e4612",
+        "answer_e05e4612"
+      ],
+      "hypothesis": "I've been listening to a mix of Lo-Fi hip hop beats and Tameca Jones' album on repeat lately, and I realized I want to create a new playlist for relaxing music. Can you suggest some mellow artists or songs that might fit the vibe? Also, by the way, I have 20 playlists on Spotify already, and I'm looking to organize them better - do you have any tips on how to categorize them?",
+      "error": null,
+      "elapsed_s": 9.874352832994191,
+      "extra": {}
+    },
+    {
+      "question_id": "ce6d2d27",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_73540165_1",
+        "answer_73540165_2"
+      ],
+      "retrieved_sessions": [
+        "answer_73540165_2",
+        "answer_73540165_2",
+        "answer_73540165_1",
+        "answer_73540165_1",
+        "answer_73540165_2",
+        "answer_73540165_1",
+        "answer_73540165_2",
+        "answer_73540165_1",
+        "answer_73540165_2",
+        "answer_73540165_1"
+      ],
+      "hypothesis": "I'm looking for some inspiration for a new cocktail recipe. Do you have any ideas for a refreshing summer drink that incorporates tequila? By the way, I have a cocktail-making class on Fridays, so maybe something I can experiment with then.",
+      "error": null,
+      "elapsed_s": 19.67932854098035,
+      "extra": {}
+    },
+    {
+      "question_id": "d24813b1",
+      "question_type": "single-session-preference",
+      "abstention": false,
+      "n_indexed": 14,
+      "n_retrieved": 8,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_7c0ade93"
+      ],
+      "retrieved_sessions": [
+        "answer_7c0ade93",
+        "answer_7c0ade93",
+        "answer_7c0ade93",
+        "answer_7c0ade93",
+        "answer_7c0ade93",
+        "answer_7c0ade93",
+        "answer_7c0ade93",
+        "answer_7c0ade93"
+      ],
+      "hypothesis": "I'm thinking of making a cake for my friend's birthday. Do you have any suggestions for a lemon flavored cake, like my lemon poppyseed cake that I made for a colleague's going-away party?",
+      "error": null,
+      "elapsed_s": 9.760991874994943,
+      "extra": {}
+    },
+    {
+      "question_id": "dad224aa",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_4a97ae40_1",
+        "answer_4a97ae40_2"
+      ],
+      "retrieved_sessions": [
+        "answer_4a97ae40_1",
+        "answer_4a97ae40_2",
+        "answer_4a97ae40_2",
+        "answer_4a97ae40_1",
+        "answer_4a97ae40_2",
+        "answer_4a97ae40_1",
+        "answer_4a97ae40_2",
+        "answer_4a97ae40_1",
+        "answer_4a97ae40_2",
+        "answer_4a97ae40_2"
+      ],
+      "hypothesis": "I'm trying to get into a consistent morning routine on weekends. Can you help me brainstorm some exercise ideas for Sunday mornings? Maybe something that doesn't require me to wake up too early, since I like sleeping in a bit later on weekends.",
+      "error": null,
+      "elapsed_s": 18.15699724998558,
+      "extra": {}
+    },
+    {
+      "question_id": "dc439ea3",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 8,
+      "n_retrieved": 5,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ultrachat_459954"
+      ],
+      "retrieved_sessions": [
+        "answer_ultrachat_459954",
+        "answer_ultrachat_459954",
+        "answer_ultrachat_459954",
+        "answer_ultrachat_459954",
+        "answer_ultrachat_459954"
+      ],
+      "hypothesis": "Wow, I didn't realize there were so many traditional games played during powwows. Which one do you think is the most exciting to watch?",
+      "error": null,
+      "elapsed_s": 4.922050249995664,
+      "extra": {}
+    },
+    {
+      "question_id": "dcfa8644",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_5e3eeb12_1",
+        "answer_5e3eeb12_2"
+      ],
+      "retrieved_sessions": [
+        "answer_5e3eeb12_2",
+        "answer_5e3eeb12_1",
+        "answer_5e3eeb12_1",
+        "answer_5e3eeb12_1",
+        "answer_5e3eeb12_2",
+        "answer_5e3eeb12_1",
+        "answer_5e3eeb12_2",
+        "answer_5e3eeb12_1",
+        "answer_5e3eeb12_1",
+        "answer_5e3eeb12_2"
+      ],
+      "hypothesis": "I'm looking for some shoe cleaning tips. I've got a pair of sneakers that I wore to play basketball on February 1st and they got pretty dirty. By the way, speaking of shoes, I realized that one of the shoelaces on my old Converse sneakers had broken on January 24th, so I had to replace it.",
+      "error": null,
+      "elapsed_s": 19.587208332988666,
+      "extra": {}
+    },
+    {
+      "question_id": "e48988bc",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 6,
+      "n_retrieved": 3,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ultrachat_174360"
+      ],
+      "retrieved_sessions": [
+        "answer_ultrachat_174360",
+        "answer_ultrachat_174360",
+        "answer_ultrachat_174360"
+      ],
+      "hypothesis": "It's great to see companies like Patagonia taking the initiative to be environmentally responsible. I hope more companies follow suit and prioritize sustainability in their supply chain practices.",
+      "error": null,
+      "elapsed_s": 4.816961125005037,
+      "extra": {}
+    },
+    {
+      "question_id": "e493bb7c",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_1a374afa_1",
+        "answer_1a374afa_2"
+      ],
+      "retrieved_sessions": [
+        "answer_1a374afa_2",
+        "answer_1a374afa_2",
+        "answer_1a374afa_1",
+        "answer_1a374afa_1",
+        "answer_1a374afa_1",
+        "answer_1a374afa_1",
+        "answer_1a374afa_2",
+        "answer_1a374afa_2",
+        "answer_1a374afa_1",
+        "answer_1a374afa_2"
+      ],
+      "hypothesis": "I'm actually planning to work on a piece that incorporates a figure in a dreamlike environment. I've been inspired by the \"Moonlit Ocean\" print in my bedroom, and I think I can use some of the techniques you mentioned to create a sense of atmosphere and mood. By the way, speaking of my bedroom, I recently moved the \"Ethereal Dreams\" painting by Emma Taylor above my bed, and it adds a nice touch to the space.",
+      "error": null,
+      "elapsed_s": 21.207520332973218,
+      "extra": {}
+    },
+    {
+      "question_id": "e6041065",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_4eb6d671_1",
+        "answer_4eb6d671_2"
+      ],
+      "retrieved_sessions": [
+        "answer_4eb6d671_1",
+        "answer_4eb6d671_2",
+        "answer_4eb6d671_1",
+        "answer_4eb6d671_2",
+        "answer_4eb6d671_1",
+        "answer_4eb6d671_2",
+        "answer_4eb6d671_2",
+        "answer_4eb6d671_2",
+        "answer_4eb6d671_1",
+        "answer_4eb6d671_1"
+      ],
+      "hypothesis": "I'm trying to avoid overpacking, so I think I'll stick to the essentials. I did learn my lesson on my last trip when I packed an entire bag of skincare products and hair care products, but I only ended up using half of them. I'm also thinking of packing some snacks, like nuts and energy bars, so I don't have to rely on airport or bus station food. Do you have any recommendations for healthy snack options that are easy to pack?",
+      "error": null,
+      "elapsed_s": 17.85114975000033,
+      "extra": {}
+    },
+    {
+      "question_id": "e982271f",
+      "question_type": "single-session-assistant",
+      "abstention": false,
+      "n_indexed": 6,
+      "n_retrieved": 5,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ultrachat_195444"
+      ],
+      "retrieved_sessions": [
+        "answer_ultrachat_195444",
+        "answer_ultrachat_195444",
+        "answer_ultrachat_195444",
+        "answer_ultrachat_195444",
+        "answer_ultrachat_195444"
+      ],
+      "hypothesis": "I'm definitely going to check out some of those venues. Do you have any favorite indie artists from Portland?",
+      "error": null,
+      "elapsed_s": 1.7901127920194995,
+      "extra": {}
+    },
+    {
+      "question_id": "ec81a493",
+      "question_type": "single-session-user",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ed1982fc"
+      ],
+      "retrieved_sessions": [
+        "answer_ed1982fc",
+        "answer_ed1982fc",
+        "answer_ed1982fc",
+        "answer_ed1982fc",
+        "answer_ed1982fc",
+        "answer_ed1982fc"
+      ],
+      "hypothesis": "I was thinking of displaying my signed poster from my favorite artist's debut album, which is a limited edition of only 500 copies worldwide, alongside the clock. Do you think that would work?",
+      "error": null,
+      "elapsed_s": 9.689249916002154,
+      "extra": {}
+    },
+    {
+      "question_id": "eeda8a6d",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_3e5fea0e_1",
+        "answer_3e5fea0e_2"
+      ],
+      "retrieved_sessions": [
+        "answer_3e5fea0e_1",
+        "answer_3e5fea0e_2",
+        "answer_3e5fea0e_2",
+        "answer_3e5fea0e_2",
+        "answer_3e5fea0e_1",
+        "answer_3e5fea0e_2",
+        "answer_3e5fea0e_2",
+        "answer_3e5fea0e_1",
+        "answer_3e5fea0e_2",
+        "answer_3e5fea0e_1"
+      ],
+      "hypothesis": "That's a great list, thanks! I'm particularly interested in Java Moss and Anacharis. Can you tell me more about how to care for them and how they'll interact with my existing fish?",
+      "error": null,
+      "elapsed_s": 19.498292500007665,
+      "extra": {}
+    },
+    {
+      "question_id": "f0853d11",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_932ea3bf_1",
+        "answer_932ea3bf_2"
+      ],
+      "retrieved_sessions": [
+        "answer_932ea3bf_1",
+        "answer_932ea3bf_1",
+        "answer_932ea3bf_2",
+        "answer_932ea3bf_2",
+        "answer_932ea3bf_2",
+        "answer_932ea3bf_2",
+        "answer_932ea3bf_1",
+        "answer_932ea3bf_1",
+        "answer_932ea3bf_2",
+        "answer_932ea3bf_2"
+      ],
+      "hypothesis": "I'm looking to find some new charity events to participate in, particularly ones that involve walking or running. I just did the \"Walk for Hunger\" 5K walk on February 21st and had a great time, so I'm looking for something similar. Do you have any recommendations?",
+      "error": null,
+      "elapsed_s": 19.308567500003846,
+      "extra": {}
+    },
+    {
+      "question_id": "f0e564bc",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_cfcf5340_1",
+        "answer_cfcf5340_2"
+      ],
+      "retrieved_sessions": [
+        "answer_cfcf5340_2",
+        "answer_cfcf5340_2",
+        "answer_cfcf5340_2",
+        "answer_cfcf5340_1",
+        "answer_cfcf5340_1",
+        "answer_cfcf5340_2",
+        "answer_cfcf5340_1",
+        "answer_cfcf5340_1",
+        "answer_cfcf5340_1",
+        "answer_cfcf5340_1"
+      ],
+      "hypothesis": "I think setting a specific budget for skincare and beauty products is a great idea. It would definitely help me make more intentional purchasing decisions and avoid impulse buys. I'd love some help creating a plan and finding more affordable alternatives for my favorite high-end products. Can you provide some guidance on how to set a realistic budget and suggest some affordable options for skincare and beauty products?",
+      "error": null,
+      "elapsed_s": 19.307638625003165,
+      "extra": {}
+    },
+    {
+      "question_id": "f685340e",
+      "question_type": "knowledge-update",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_25df025b_1",
+        "answer_25df025b_2"
+      ],
+      "retrieved_sessions": [
+        "answer_25df025b_2",
+        "answer_25df025b_1",
+        "answer_25df025b_2",
+        "answer_25df025b_1",
+        "answer_25df025b_1",
+        "answer_25df025b_2",
+        "answer_25df025b_2",
+        "answer_25df025b_2",
+        "answer_25df025b_1",
+        "answer_25df025b_1"
+      ],
+      "hypothesis": "I'm looking to plan out my weekend. Can you suggest some jogging routes near my house? Oh, and by the way, I'm planning to play tennis with my friends at the local park this Sunday, like we do every other week.",
+      "error": null,
+      "elapsed_s": 19.35877791699022,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_15e38248",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 42,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_8858d9dc_1",
+        "answer_8858d9dc_2",
+        "answer_8858d9dc_3",
+        "answer_8858d9dc_4"
+      ],
+      "retrieved_sessions": [
+        "answer_8858d9dc_2",
+        "answer_8858d9dc_4",
+        "answer_8858d9dc_4",
+        "answer_8858d9dc_4",
+        "answer_8858d9dc_2",
+        "answer_8858d9dc_1",
+        "answer_8858d9dc_3",
+        "answer_8858d9dc_4",
+        "answer_8858d9dc_2",
+        "answer_8858d9dc_2"
+      ],
+      "hypothesis": "I'm thinking of getting some new throw pillows for my couch, can you recommend some good online stores that sell a wide variety of patterns and fabrics? Oh, and speaking of organizing, I finally assembled that IKEA bookshelf for my home office about two months ago, and it's been a game-changer for my productivity.",
+      "error": null,
+      "elapsed_s": 35.63492708301055,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_1916e0ea",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_447052a5_1",
+        "answer_447052a5_2"
+      ],
+      "retrieved_sessions": [
+        "answer_447052a5_2",
+        "answer_447052a5_1",
+        "answer_447052a5_1",
+        "answer_447052a5_1",
+        "answer_447052a5_1",
+        "answer_447052a5_2",
+        "answer_447052a5_1",
+        "answer_447052a5_2",
+        "answer_447052a5_2",
+        "answer_447052a5_1"
+      ],
+      "hypothesis": "I've been meaning to organize my pantry and kitchen cabinets for a while now, and your suggestions are super helpful. I'm excited to get started this weekend. By the way, I'm glad I cancelled my monthly grocery delivery subscription from FarmFresh, which I wasn't using frequently enough, and saved $100 per month. It's great to be more mindful of my spending and plan my meals more efficiently.",
+      "error": null,
+      "elapsed_s": 17.8223082080076,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_21adecb5",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_1e2369c9_1",
+        "answer_1e2369c9_2"
+      ],
+      "retrieved_sessions": [
+        "answer_1e2369c9_2",
+        "answer_1e2369c9_1",
+        "answer_1e2369c9_1",
+        "answer_1e2369c9_2",
+        "answer_1e2369c9_2",
+        "answer_1e2369c9_2",
+        "answer_1e2369c9_2",
+        "answer_1e2369c9_1",
+        "answer_1e2369c9_1",
+        "answer_1e2369c9_1"
+      ],
+      "hypothesis": "I'm looking for some recommendations on NLP research papers to read. I just submitted my master's thesis on computer science today, and I'm looking to stay up-to-date with the latest developments in the field.",
+      "error": null,
+      "elapsed_s": 19.466210583021166,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_2ba83207",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 48,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_6a3b5c13_1",
+        "answer_6a3b5c13_2",
+        "answer_6a3b5c13_3",
+        "answer_6a3b5c13_4"
+      ],
+      "retrieved_sessions": [
+        "answer_6a3b5c13_1",
+        "answer_6a3b5c13_3",
+        "answer_6a3b5c13_3",
+        "answer_6a3b5c13_3",
+        "answer_6a3b5c13_3",
+        "answer_6a3b5c13_2",
+        "answer_6a3b5c13_2",
+        "answer_6a3b5c13_2",
+        "answer_6a3b5c13_2",
+        "answer_6a3b5c13_4"
+      ],
+      "hypothesis": "I'm trying to plan my meals for the upcoming week and was wondering if you could help me with some recipe suggestions. By the way, I just want to mention that I went grocery shopping last Saturday, exactly a week ago, and spent around $120 at Walmart, which is actually a bit higher than I expected, but I did get some good deals with a 10% off coupon on dairy products.",
+      "error": null,
+      "elapsed_s": 32.53386137500638,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_2d58bcd6",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 9,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_3e11e0ae_1",
+        "answer_3e11e0ae_2"
+      ],
+      "retrieved_sessions": [
+        "answer_3e11e0ae_1",
+        "answer_3e11e0ae_1",
+        "answer_3e11e0ae_2",
+        "answer_3e11e0ae_2",
+        "answer_3e11e0ae_2",
+        "answer_3e11e0ae_2",
+        "answer_3e11e0ae_1",
+        "answer_3e11e0ae_1",
+        "answer_3e11e0ae_2"
+      ],
+      "hypothesis": "I'm looking for some book recommendations. I've been trying to read more diversely and I just finished \"The Hate U Give\" by Angie Thomas, which I had to rush to finish for my book club meeting two weeks ago - I was the only one who hadn't finished it, but I managed to finish it a few days before. Do you have any suggestions for similar books or authors I might like?",
+      "error": null,
+      "elapsed_s": 24.346819124999456,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_372c3eed_abs",
+      "question_type": "multi-session",
+      "abstention": true,
+      "n_indexed": 34,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [],
+      "retrieved_sessions": [
+        "answer_35c5419d_abs_1",
+        "answer_35c5419d_abs_3",
+        "answer_35c5419d_abs_3",
+        "answer_35c5419d_abs_1",
+        "answer_35c5419d_abs_2",
+        "answer_35c5419d_abs_3",
+        "answer_35c5419d_abs_3",
+        "answer_35c5419d_abs_1",
+        "answer_35c5419d_abs_1",
+        "answer_35c5419d_abs_2"
+      ],
+      "hypothesis": "That's really helpful, thanks! I actually attended UCLA for undergrad after I attended Arcadia High School from 2010 to 2014, so I'm familiar with the campus and program. Could you tell me more about the differences between the CS programs at UCLA and UC Berkeley?",
+      "error": null,
+      "elapsed_s": 27.477643250022084,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_5501fe77",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 34,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_203bf3fa_1",
+        "answer_203bf3fa_2",
+        "answer_203bf3fa_3"
+      ],
+      "retrieved_sessions": [
+        "answer_203bf3fa_1",
+        "answer_203bf3fa_3",
+        "answer_203bf3fa_1",
+        "answer_203bf3fa_2",
+        "answer_203bf3fa_2",
+        "answer_203bf3fa_2",
+        "answer_203bf3fa_2",
+        "answer_203bf3fa_2",
+        "answer_203bf3fa_1",
+        "answer_203bf3fa_1"
+      ],
+      "hypothesis": "I'm trying to optimize my social media strategy and I was wondering if you could help me analyze my current performance. By the way, I just noticed that my Twitter follower count has jumped from 420 to 540 over the past month, which is really encouraging.",
+      "error": null,
+      "elapsed_s": 28.973362082993845,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_5dcc0aab",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 58,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_099c1b6c_1",
+        "answer_099c1b6c_2",
+        "answer_099c1b6c_3",
+        "answer_099c1b6c_4",
+        "answer_099c1b6c_5"
+      ],
+      "retrieved_sessions": [
+        "answer_099c1b6c_3",
+        "answer_099c1b6c_1",
+        "answer_099c1b6c_1",
+        "answer_099c1b6c_2",
+        "answer_099c1b6c_3",
+        "answer_099c1b6c_5",
+        "answer_099c1b6c_4",
+        "answer_099c1b6c_3",
+        "answer_099c1b6c_5",
+        "answer_099c1b6c_3"
+      ],
+      "hypothesis": "That's really helpful, thanks for the detailed comparison. I think I'll try on both pairs to see which one feels more comfortable. By the way, I wore my trusty old Converse Chuck Taylor All Star sneakers to that outdoor music festival last month, and they were super comfortable, but I did notice that the soles are starting to wear down a bit, especially on the heels. Do you think I should get them replaced soon?",
+      "error": null,
+      "elapsed_s": 32.902944333007326,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_731e37d7",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 46,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_826d51da_1",
+        "answer_826d51da_2",
+        "answer_826d51da_3",
+        "answer_826d51da_4"
+      ],
+      "retrieved_sessions": [
+        "answer_826d51da_1",
+        "answer_826d51da_1",
+        "answer_826d51da_1",
+        "answer_826d51da_3",
+        "answer_826d51da_3",
+        "answer_826d51da_2",
+        "answer_826d51da_3",
+        "answer_826d51da_1",
+        "answer_826d51da_1",
+        "answer_826d51da_4"
+      ],
+      "hypothesis": "That's a lot of helpful information! I think I need to work on my keyword research and on-page optimization. I'll make sure to check out those resources you mentioned. By the way, I mentioned earlier that I've been attending a lot of workshops lately - I've actually attended five in the last three months, and I've been finding them really helpful for my business.",
+      "error": null,
+      "elapsed_s": 37.773458124982426,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_74aed68e",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_aed8cf17_1",
+        "answer_aed8cf17_2"
+      ],
+      "retrieved_sessions": [
+        "answer_aed8cf17_1",
+        "answer_aed8cf17_2",
+        "answer_aed8cf17_2",
+        "answer_aed8cf17_1",
+        "answer_aed8cf17_1",
+        "answer_aed8cf17_1",
+        "answer_aed8cf17_2",
+        "answer_aed8cf17_2",
+        "answer_aed8cf17_1",
+        "answer_aed8cf17_2"
+      ],
+      "hypothesis": "I'm trying to optimize my car's performance for the next auto racking event. I replaced my spark plugs with new ones from NGK today, after noticing a slight misfire during my daily commute, and it made a huge difference. Can you recommend some tips on suspension upgrades to further improve my car's handling?",
+      "error": null,
+      "elapsed_s": 18.101026041986188,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_78cf46a3",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 20,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_5a78688d_1",
+        "answer_5a78688d_2"
+      ],
+      "retrieved_sessions": [
+        "answer_5a78688d_2",
+        "answer_5a78688d_1",
+        "answer_5a78688d_1",
+        "answer_5a78688d_2",
+        "answer_5a78688d_1",
+        "answer_5a78688d_2",
+        "answer_5a78688d_1",
+        "answer_5a78688d_1",
+        "answer_5a78688d_2",
+        "answer_5a78688d_2"
+      ],
+      "hypothesis": "I'm actually planning to buy a new phone charger, since I lost my old one at the gym about two weeks ago.",
+      "error": null,
+      "elapsed_s": 14.76040358300088,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_7f6b06db",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 36,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_5d8c99d3_1",
+        "answer_5d8c99d3_2",
+        "answer_5d8c99d3_3"
+      ],
+      "retrieved_sessions": [
+        "answer_5d8c99d3_1",
+        "answer_5d8c99d3_1",
+        "answer_5d8c99d3_2",
+        "answer_5d8c99d3_3",
+        "answer_5d8c99d3_2",
+        "answer_5d8c99d3_1",
+        "answer_5d8c99d3_2",
+        "answer_5d8c99d3_3",
+        "answer_5d8c99d3_1",
+        "answer_5d8c99d3_3"
+      ],
+      "hypothesis": "I've been thinking about getting a new backpack for my upcoming trip to the Eastern Sierra, and I was wondering if you could recommend some good options for a lightweight backpack that's suitable for 3-4 day trips? By the way, I just got back from a day hike to Muir Woods National Monument with my family today, and it was amazing!",
+      "error": null,
+      "elapsed_s": 30.521629958006088,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_85da3956",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_581ab834_1"
+      ],
+      "retrieved_sessions": [
+        "answer_581ab834_1",
+        "answer_581ab834_1",
+        "answer_581ab834_1",
+        "answer_581ab834_1",
+        "answer_581ab834_1",
+        "answer_581ab834_1"
+      ],
+      "hypothesis": "I'm thinking of visiting on a weekend, so the General Admission ticket might be the best option for me. Can you tell me more about the new single-rider line system they've implemented? I've heard it can save a lot of time, but I'm not sure how it works. By the way, have you heard about the Nighttime Lights at Hogwarts Castle show at Universal Studios Hollywood? I caught it during the \"Summer Nights\" festival with Rachel and Mike, and it was absolutely breathtaking!",
+      "error": null,
+      "elapsed_s": 9.621440374990925,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_98f46fc6",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_5850de18_1",
+        "answer_5850de18_2"
+      ],
+      "retrieved_sessions": [
+        "answer_5850de18_2",
+        "answer_5850de18_1",
+        "answer_5850de18_1",
+        "answer_5850de18_2",
+        "answer_5850de18_1",
+        "answer_5850de18_2",
+        "answer_5850de18_1",
+        "answer_5850de18_2",
+        "answer_5850de18_2",
+        "answer_5850de18_1"
+      ],
+      "hypothesis": "Can you provide a template for a charity thank-you note or email that I can send to our donors and supporters after the bake sale?",
+      "error": null,
+      "elapsed_s": 19.258217959024478,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_a2d1d1f6",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_f6d6e33f_1"
+      ],
+      "retrieved_sessions": [
+        "answer_f6d6e33f_1",
+        "answer_f6d6e33f_1",
+        "answer_f6d6e33f_1",
+        "answer_f6d6e33f_1",
+        "answer_f6d6e33f_1",
+        "answer_f6d6e33f_1"
+      ],
+      "hypothesis": "I'm planning to make a salad for dinner tonight and I was wondering if you could give me some recipe suggestions that feature fresh herbs, like basil or thyme. I just harvested my first batch of fresh herbs from the herb garden kit today and I want to use them up!",
+      "error": null,
+      "elapsed_s": 9.620038416003808,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_a56e767c",
+      "question_type": "multi-session",
+      "abstention": false,
+      "n_indexed": 36,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_cf9e3940_1",
+        "answer_cf9e3940_2",
+        "answer_cf9e3940_3"
+      ],
+      "retrieved_sessions": [
+        "answer_cf9e3940_3",
+        "answer_cf9e3940_2",
+        "answer_cf9e3940_2",
+        "answer_cf9e3940_2",
+        "answer_cf9e3940_3",
+        "answer_cf9e3940_3",
+        "answer_cf9e3940_2",
+        "answer_cf9e3940_3",
+        "answer_cf9e3940_2",
+        "answer_cf9e3940_1"
+      ],
+      "hypothesis": "I'm interested in learning more about the film industry, especially when it comes to independent films and documentaries. Can you recommend some films that explore themes of social justice and identity, similar to \"Parasite\" and \"The Farewell\"? By the way, I just got back from AFI Fest in LA, where I attended a screening of \"Joker\" and got to see Todd Phillips and Joaquin Phoenix during the Q&A session - it was really thought-provoking.",
+      "error": null,
+      "elapsed_s": 36.00642029201845,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_af6db32f",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_184c8f56_1"
+      ],
+      "retrieved_sessions": [
+        "answer_184c8f56_1",
+        "answer_184c8f56_1",
+        "answer_184c8f56_1",
+        "answer_184c8f56_1",
+        "answer_184c8f56_1",
+        "answer_184c8f56_1"
+      ],
+      "hypothesis": "I was thinking, since I won $20 from my colleague after the Super Bowl, maybe I should use some of that money to get some prizes for the fantasy football draft party. Do you have any ideas for some fun and creative prizes that would be fitting for the occasion?",
+      "error": null,
+      "elapsed_s": 9.741367500013439,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_b5700ca9",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 12,
+      "n_retrieved": 6,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_a17423e7_1"
+      ],
+      "retrieved_sessions": [
+        "answer_a17423e7_1",
+        "answer_a17423e7_1",
+        "answer_a17423e7_1",
+        "answer_a17423e7_1",
+        "answer_a17423e7_1",
+        "answer_a17423e7_1"
+      ],
+      "hypothesis": "Yes, I'd like to take the next step. Please provide me with the contact information and application form. I'm looking forward to volunteering at the food bank and making a difference in my community. By the way, I'm glad I got to attend the Maundy Thursday service at the Episcopal Church today, it was a beautiful and moving experience.",
+      "error": null,
+      "elapsed_s": 9.738531250011874,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_cd90e484",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_aa930b56_1",
+        "answer_aa930b56_2"
+      ],
+      "retrieved_sessions": [
+        "answer_aa930b56_2",
+        "answer_aa930b56_1",
+        "answer_aa930b56_1",
+        "answer_aa930b56_1",
+        "answer_aa930b56_2",
+        "answer_aa930b56_2",
+        "answer_aa930b56_2",
+        "answer_aa930b56_1",
+        "answer_aa930b56_2",
+        "answer_aa930b56_1"
+      ],
+      "hypothesis": "I'm looking for some tips on improving my bird identification skills. I've been listening to bird calls online for about a month now, and it's been helping, but I'm still not confident in my abilities. By the way, I did manage to sneak in some birding time a week ago when I took a walk around my neighborhood after dinner. I saw a few common birds like robins and sparrows, but nothing too exciting. Except, I did notice that the American goldfinches seem to be returning to the area, which is always a nice sign of spring.",
+      "error": null,
+      "elapsed_s": 17.754108249995625,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_d6585ce9",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 58,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_f999b05c_1",
+        "answer_f999b05c_2",
+        "answer_f999b05c_3",
+        "answer_f999b05c_4",
+        "answer_f999b05c_5"
+      ],
+      "retrieved_sessions": [
+        "answer_f999b05c_1",
+        "answer_f999b05c_3",
+        "answer_f999b05c_3",
+        "answer_f999b05c_2",
+        "answer_f999b05c_2",
+        "answer_f999b05c_2",
+        "answer_f999b05c_4",
+        "answer_f999b05c_1",
+        "answer_f999b05c_1",
+        "answer_f999b05c_5"
+      ],
+      "hypothesis": "I think I'll try Shutterfly or Snapfish for printing my photo. They seem to have good reviews and a wide range of printing options. Do you have any tips on how to properly care for my framed photo and ticket stub to ensure they last for a long time?",
+      "error": null,
+      "elapsed_s": 41.83309550001286,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_d9af6064",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_da704e79_1",
+        "answer_da704e79_2"
+      ],
+      "retrieved_sessions": [
+        "answer_da704e79_1",
+        "answer_da704e79_1",
+        "answer_da704e79_2",
+        "answer_da704e79_2",
+        "answer_da704e79_1",
+        "answer_da704e79_1",
+        "answer_da704e79_1",
+        "answer_da704e79_2",
+        "answer_da704e79_2",
+        "answer_da704e79_2"
+      ],
+      "hypothesis": "I'm with XYZ Internet, and I currently have a 500 Mbps plan. I recently got a new router on January 15th, which has improved my Wi-Fi signal strength significantly. However, I still need to figure out how to set up the guest network feature. As for devices, I have around 5-6 devices connected, including my laptop, smart TV, and smart speaker. I usually work from my home office, which is about 10-15 feet away from the router. I've been using Wi-Fi, but I do have an Ethernet cable if needed. I haven't run a speed test recently, but I'll do that now.",
+      "error": null,
+      "elapsed_s": 19.636904209008208,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_e061b84g",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 36,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_8c64ce26_1",
+        "answer_8c64ce26_2",
+        "answer_8c64ce26_3"
+      ],
+      "retrieved_sessions": [
+        "answer_8c64ce26_2",
+        "answer_8c64ce26_2",
+        "answer_8c64ce26_2",
+        "answer_8c64ce26_3",
+        "answer_8c64ce26_1",
+        "answer_8c64ce26_3",
+        "answer_8c64ce26_3",
+        "answer_8c64ce26_3",
+        "answer_8c64ce26_3",
+        "answer_8c64ce26_3"
+      ],
+      "hypothesis": "That's helpful, thanks! I've been thinking of exploring the waterfront path, but I was wondering if you know if it's open to cyclists during the week, or is it more of a weekend thing?",
+      "error": null,
+      "elapsed_s": 28.971601416997146,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_f420262c",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 54,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_d8a1af6b_1",
+        "answer_d8a1af6b_2",
+        "answer_d8a1af6b_3",
+        "answer_d8a1af6b_4",
+        "answer_d8a1af6b_5"
+      ],
+      "retrieved_sessions": [
+        "answer_d8a1af6b_4",
+        "answer_d8a1af6b_3",
+        "answer_d8a1af6b_5",
+        "answer_d8a1af6b_4",
+        "answer_d8a1af6b_2",
+        "answer_d8a1af6b_4",
+        "answer_d8a1af6b_2",
+        "answer_d8a1af6b_2",
+        "answer_d8a1af6b_5",
+        "answer_d8a1af6b_2"
+      ],
+      "hypothesis": "I'm planning a trip to Miami and I'm considering flying with American Airlines. What's their in-flight entertainment system like? By the way, I had a terrible experience with it on my flight from New York to Los Angeles today.",
+      "error": null,
+      "elapsed_s": 45.53361174999736,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_f49edff3",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 30,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_3e9fce53_1",
+        "answer_3e9fce53_2",
+        "answer_3e9fce53_3"
+      ],
+      "retrieved_sessions": [
+        "answer_3e9fce53_2",
+        "answer_3e9fce53_3",
+        "answer_3e9fce53_1",
+        "answer_3e9fce53_3",
+        "answer_3e9fce53_3",
+        "answer_3e9fce53_3",
+        "answer_3e9fce53_2",
+        "answer_3e9fce53_2",
+        "answer_3e9fce53_2",
+        "answer_3e9fce53_1"
+      ],
+      "hypothesis": "I'm thinking of getting a baby gift for a coworker's new baby, and I was wondering if you could give me some recommendations for essential items that new parents usually need. By the way, I just helped my cousin pick out some stuff for her baby shower, and we ended up getting diapers, wipes, and a baby monitor at Target.",
+      "error": null,
+      "elapsed_s": 24.158642875001533,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_fa19884c",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 22,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ff201786_1",
+        "answer_ff201786_2"
+      ],
+      "retrieved_sessions": [
+        "answer_ff201786_1",
+        "answer_ff201786_2",
+        "answer_ff201786_2",
+        "answer_ff201786_1",
+        "answer_ff201786_1",
+        "answer_ff201786_2",
+        "answer_ff201786_2",
+        "answer_ff201786_1",
+        "answer_ff201786_1",
+        "answer_ff201786_2"
+      ],
+      "hypothesis": "I'll definitely consider your advice on buying a ukulele. By the way, I started playing along to my favorite songs on my old keyboard today, and it was a lot of fun! I've been listening to a lot of music featuring the piano, which inspired me to dust off my old keyboard and start playing again.",
+      "error": null,
+      "elapsed_s": 19.462292500014883,
+      "extra": {}
+    },
+    {
+      "question_id": "gpt4_fa19884d",
+      "question_type": "temporal-reasoning",
+      "abstention": false,
+      "n_indexed": 24,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "answer_ff201787_1",
+        "answer_ff201787_2"
+      ],
+      "retrieved_sessions": [
+        "answer_ff201787_1",
+        "answer_ff201787_1",
+        "answer_ff201787_2",
+        "answer_ff201787_2",
+        "answer_ff201787_1",
+        "answer_ff201787_1",
+        "answer_ff201787_2",
+        "answer_ff201787_2",
+        "answer_ff201787_1",
+        "answer_ff201787_2"
+      ],
+      "hypothesis": "I'll definitely consider your advice on buying a ukulele. By the way, I started playing along to my favorite songs on my old keyboard today, and it was a lot of fun! I've been listening to a lot of music featuring the piano, which inspired me to dust off my old keyboard and start playing again.",
+      "error": null,
+      "elapsed_s": 21.132149667013437,
+      "extra": {}
+    }
+  ]
+}

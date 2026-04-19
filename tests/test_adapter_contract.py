@@ -16,6 +16,14 @@ from mceval.adapters.base import Memory, MemoryAdapter, Turn
 from mceval.adapters.bm25_baseline import BM25BaselineAdapter
 from mceval.adapters.memory_core import MemoryCoreAdapter
 
+try:
+    from mceval.adapters.dense_baseline import DenseBaselineAdapter, _DENSE_AVAILABLE
+    from mceval.adapters.hybrid_rrf_baseline import HybridRRFBaselineAdapter
+except ImportError:
+    DenseBaselineAdapter = None  # type: ignore
+    HybridRRFBaselineAdapter = None  # type: ignore
+    _DENSE_AVAILABLE = False
+
 
 def _memory_core_available() -> bool:
     """Return True iff a Memory Core API is reachable at MEMORY_CORE_URL (or
@@ -30,6 +38,22 @@ def _memory_core_available() -> bool:
 
 ADAPTER_FACTORIES = [
     pytest.param(BM25BaselineAdapter, id="bm25"),
+    pytest.param(
+        DenseBaselineAdapter,
+        id="dense",
+        marks=pytest.mark.skipif(
+            not _DENSE_AVAILABLE,
+            reason="sentence-transformers not installed; pip install '.[dense]'",
+        ),
+    ),
+    pytest.param(
+        HybridRRFBaselineAdapter,
+        id="hybrid-rrf",
+        marks=pytest.mark.skipif(
+            not _DENSE_AVAILABLE,
+            reason="sentence-transformers not installed; pip install '.[dense]'",
+        ),
+    ),
     pytest.param(
         MemoryCoreAdapter,
         id="memory-core",

@@ -16,6 +16,8 @@ from typing import Callable
 
 from mceval.adapters.base import MemoryAdapter
 from mceval.adapters.bm25_baseline import BM25BaselineAdapter
+from mceval.adapters.dense_baseline import DenseBaselineAdapter
+from mceval.adapters.hybrid_rrf_baseline import HybridRRFBaselineAdapter
 from mceval.adapters.memory_core import MemoryCoreAdapter
 from mceval.datasets.longmemeval import load_longmemeval_oracle
 from mceval.eval.runner import run_eval
@@ -25,6 +27,8 @@ from mceval.eval.trace import TraceWriter
 # Adapter registry: name -> factory accepting CLI kwargs
 ADAPTERS: dict[str, Callable[..., MemoryAdapter]] = {
     "bm25": lambda **_: BM25BaselineAdapter(),
+    "dense": lambda **_: DenseBaselineAdapter(),
+    "hybrid-rrf": lambda **_: HybridRRFBaselineAdapter(),
     "memory-core": lambda base_url=None, api_key=None, **_: MemoryCoreAdapter(
         base_url=base_url, api_key=api_key
     ),

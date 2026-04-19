@@ -22,3 +22,4 @@ results/*.jsonl
 .DS_Store
 .idea/
 .vscode/
+reports/*.log
