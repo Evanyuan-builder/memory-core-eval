@@ -19,7 +19,7 @@ from mceval.adapters.bm25_baseline import BM25BaselineAdapter
 from mceval.adapters.dense_baseline import DenseBaselineAdapter
 from mceval.adapters.hybrid_rrf_baseline import HybridRRFBaselineAdapter
 from mceval.adapters.memory_core import MemoryCoreAdapter
-from mceval.datasets.longmemeval import load_longmemeval_oracle
+from mceval.datasets.longmemeval import SPLIT_FILENAMES, load_longmemeval
 from mceval.eval.runner import run_eval
 from mceval.eval.scorer import QuestionResult
 from mceval.eval.trace import TraceWriter
@@ -99,13 +99,14 @@ def _result_to_dict(r: QuestionResult) -> dict:
 
 
 def cmd_run(args: argparse.Namespace) -> int:
-    dataset = load_longmemeval_oracle(
+    dataset = load_longmemeval(
+        split=args.split,
         sample=args.sample,
         seed=args.seed,
         stratified=args.stratified,
     )
     tag = "stratified" if args.stratified else (f"seed={args.seed}" if args.seed is not None else "head")
-    print(f"Loaded {len(dataset)} LongMemEval oracle questions ({tag})")
+    print(f"Loaded {len(dataset)} LongMemEval-{args.split} questions ({tag})")
 
     adapter = _build_adapter(args.adapter, args)
     print(f"Running adapter: {adapter.name}  (workers={args.workers})")
@@ -134,13 +135,15 @@ def cmd_run(args: argparse.Namespace) -> int:
 
 def cmd_compare(args: argparse.Namespace) -> int:
     adapters = [a.strip() for a in args.adapters.split(",") if a.strip()]
-    dataset = load_longmemeval_oracle(
+    dataset = load_longmemeval(
+        split=args.split,
         sample=args.sample,
         seed=args.seed,
         stratified=args.stratified,
     )
     tag = "stratified" if args.stratified else (f"seed={args.seed}" if args.seed is not None else "head")
-    print(f"Loaded {len(dataset)} questions ({tag}). Comparing: {', '.join(adapters)}\n")
+    print(f"Loaded {len(dataset)} LongMemEval-{args.split} questions ({tag}). "
+          f"Comparing: {', '.join(adapters)}\n")
 
     rows = []
     for name in adapters:
@@ -178,6 +181,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     # shared
     def _add_common(sp: argparse.ArgumentParser) -> None:
+        sp.add_argument("--split", default="oracle", choices=sorted(SPLIT_FILENAMES),
+                        help="LongMemEval split: oracle (default), s (session haystack), m (long-horizon)")
         sp.add_argument("--sample", type=int, default=None, help="Eval only N questions (see --seed / --stratified)")
         sp.add_argument("--seed", type=int, default=None,
                         help="Shuffle with this seed before sampling. Required for representative small samples.")

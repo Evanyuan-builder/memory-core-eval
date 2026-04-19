@@ -1,8 +1,13 @@
-"""LongMemEval dataset loader (oracle split).
+"""LongMemEval dataset loader.
 
-Pins the HuggingFace dataset revision and verifies a sha256 hash of the
-downloaded file when provided. Cached under ``~/.cache/memory-core-eval`` by
-default.
+Supports the three haystack splits shipped by ``xiaowu0162/longmemeval-cleaned``:
+
+- ``oracle`` — keeps only evidence sessions (turn-level needle-in-haystack is
+  low; adapters tend to saturate Recall@10 here).
+- ``s`` — session-level haystack (~50 sessions per question). This is the
+  LongMemEval-S number the paper reports (BM25 R@10 ≈ 86.2%, hybrid ≈ 95.2%).
+- ``m`` — long-horizon haystack (~500 sessions, ~5k turns per question).
+  Multi-GB download; plan for hours of wall-time on laptop-class hardware.
 
 Dataset: https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned
 Paper:   https://arxiv.org/abs/2410.10813
@@ -18,7 +23,12 @@ from pathlib import Path
 from typing import Iterable
 
 HF_REPO_ID = "xiaowu0162/longmemeval-cleaned"
-ORACLE_FILENAME = "longmemeval_oracle.json"
+
+SPLIT_FILENAMES: dict[str, str] = {
+    "oracle": "longmemeval_oracle.json",
+    "s": "longmemeval_s_cleaned.json",
+    "m": "longmemeval_m_cleaned.json",
+}
 
 DEFAULT_CACHE_DIR = Path(
     os.getenv("MCEVAL_CACHE_DIR")
@@ -26,7 +36,8 @@ DEFAULT_CACHE_DIR = Path(
 )
 
 
-def load_longmemeval_oracle(
+def load_longmemeval(
+    split: str = "oracle",
     sample: int | None = None,
     cache_dir: Path | None = None,
     expected_sha256: str | None = None,
@@ -34,15 +45,17 @@ def load_longmemeval_oracle(
     seed: int | None = None,
     stratified: bool = False,
 ) -> list[dict]:
-    """Download (once) and return the LongMemEval oracle split.
+    """Download (once) and return a LongMemEval split.
 
     Parameters
     ----------
+    split
+        One of ``"oracle"``, ``"s"``, ``"m"``. See module docstring.
     sample
         If set, return N items. Without ``seed`` or ``stratified`` this takes
         ``data[:N]`` — which is BIASED because the dataset is clustered by
-        question type. For any N < 500 you almost certainly want ``seed`` or
-        ``stratified``.
+        question type. For any N < len(data) you almost certainly want
+        ``seed`` or ``stratified``.
     cache_dir
         Where to cache the dataset file. Defaults to ``~/.cache/memory-core-eval``.
     expected_sha256
@@ -58,20 +71,27 @@ def load_longmemeval_oracle(
         If True, sample proportionally across ``question_type`` so the mix
         mirrors the full dataset. Uses ``seed`` (default 0) for determinism.
     """
+    split = split.lower()
+    if split not in SPLIT_FILENAMES:
+        raise ValueError(
+            f"unknown LongMemEval split: {split!r}. "
+            f"choose one of {sorted(SPLIT_FILENAMES)}"
+        )
+    filename = SPLIT_FILENAMES[split]
+
     cache_dir = Path(cache_dir) if cache_dir else DEFAULT_CACHE_DIR
     cache_dir.mkdir(parents=True, exist_ok=True)
-    cache_file = cache_dir / ORACLE_FILENAME
+    cache_file = cache_dir / filename
 
     if not cache_file.exists():
         from huggingface_hub import hf_hub_download
         downloaded = hf_hub_download(
             repo_id=HF_REPO_ID,
-            filename=ORACLE_FILENAME,
+            filename=filename,
             repo_type="dataset",
             local_dir=str(cache_dir),
             revision=revision,
         )
-        # hf_hub_download may place file in a subdir structure; normalize.
         if Path(downloaded).resolve() != cache_file.resolve():
             cache_file.write_bytes(Path(downloaded).read_bytes())
 
@@ -100,6 +120,11 @@ def load_longmemeval_oracle(
     return data[:sample]
 
 
+def load_longmemeval_oracle(**kwargs) -> list[dict]:
+    """Back-compat wrapper — equivalent to ``load_longmemeval(split="oracle", ...)``."""
+    return load_longmemeval(split="oracle", **kwargs)
+
+
 def _stratified_sample(data: list[dict], n: int, seed: int) -> list[dict]:
     """Proportional per-type sample using largest-remainder rounding to hit n
     exactly. Within each type, items are picked deterministically by ``seed``.
@@ -113,7 +138,6 @@ def _stratified_sample(data: list[dict], n: int, seed: int) -> list[dict]:
     raw = {t: n * len(items) / total for t, items in by_type.items()}
     floor_alloc = {t: int(v) for t, v in raw.items()}
     remainder = n - sum(floor_alloc.values())
-    # distribute the leftover by largest remainder (deterministic tie-break by type name)
     ranked = sorted(raw.items(), key=lambda kv: (-(kv[1] - int(kv[1])), kv[0]))
     for t, _ in ranked[:remainder]:
         floor_alloc[t] += 1
@@ -126,7 +150,6 @@ def _stratified_sample(data: list[dict], n: int, seed: int) -> list[dict]:
         picked = rng.sample(items, k)
         out.extend(picked)
 
-    # Stable deterministic order across runs: sort by question_id
     out.sort(key=lambda x: x.get("question_id", ""))
     return out
 
@@ -148,20 +171,20 @@ def iter_turns(item: dict) -> Iterable[tuple[str, int, int, str, str]]:
 def evidence_session_ids(item: dict) -> set[str]:
     """Extract the set of gold evidence session IDs for a question.
 
+    Prefers ``answer_session_ids`` (authoritative across all splits). Falls
+    back to the legacy ``evidence[].session_id`` shape for older snapshots.
     Abstention questions (``_abs`` suffix) have no evidence by design.
     """
-    qid = item.get("question_id", "")
-    if qid.endswith("_abs"):
+    if is_abstention(item):
         return set()
 
-    sids: set[str] = set()
+    sids = {str(sid) for sid in item.get("answer_session_ids") or [] if sid}
+    if sids:
+        return sids
+
     for ev in item.get("evidence") or []:
         sid = ev.get("session_id") or ev.get("evidence_session_id")
         if sid:
-            sids.add(str(sid))
-
-    if not sids:
-        for sid in item.get("haystack_session_ids", []):
             sids.add(str(sid))
     return sids
 
