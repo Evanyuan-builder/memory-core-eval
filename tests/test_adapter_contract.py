@@ -24,6 +24,33 @@ except ImportError:
     HybridRRFBaselineAdapter = None  # type: ignore
     _DENSE_AVAILABLE = False
 
+try:
+    from mceval.adapters.hindsight import HindsightAdapter
+    _HINDSIGHT_IMPORT_OK = True
+except ImportError:
+    HindsightAdapter = None  # type: ignore
+    _HINDSIGHT_IMPORT_OK = False
+
+try:
+    from mceval.adapters.mflow import MflowAdapter
+    _MFLOW_IMPORT_OK = True
+except ImportError:
+    MflowAdapter = None  # type: ignore
+    _MFLOW_IMPORT_OK = False
+
+
+def _mflow_available() -> bool:
+    """True iff mflow-ai itself is importable. The adapter module loads fine
+    without it, but the adapter refuses to construct. Contract tests skip.
+    """
+    if not _MFLOW_IMPORT_OK:
+        return False
+    try:
+        import m_flow  # noqa: F401
+        return True
+    except ImportError:
+        return False
+
 
 def _memory_core_available() -> bool:
     """Return True iff a Memory Core API is reachable at MEMORY_CORE_URL (or
@@ -34,6 +61,22 @@ def _memory_core_available() -> bool:
         return httpx.get(f"{url}/health", timeout=2.0).status_code == 200
     except Exception:
         return False
+
+
+def _hindsight_available() -> bool:
+    """True iff a Hindsight server is reachable at HINDSIGHT_URL. Accepts any
+    non-5xx response (the concrete health path may vary between builds).
+    """
+    if not _HINDSIGHT_IMPORT_OK:
+        return False
+    url = os.getenv("HINDSIGHT_URL", "http://127.0.0.1:8080")
+    try:
+        return httpx.get(f"{url}/health", timeout=2.0).status_code < 500
+    except Exception:
+        try:
+            return httpx.get(url, timeout=2.0).status_code < 500
+        except Exception:
+            return False
 
 
 ADAPTER_FACTORIES = [
@@ -60,6 +103,22 @@ ADAPTER_FACTORIES = [
         marks=pytest.mark.skipif(
             not _memory_core_available(),
             reason="Memory Core API not reachable; set MEMORY_CORE_URL to enable",
+        ),
+    ),
+    pytest.param(
+        HindsightAdapter,
+        id="hindsight",
+        marks=pytest.mark.skipif(
+            not _hindsight_available(),
+            reason="Hindsight server not reachable; pip install hindsight-client and set HINDSIGHT_URL",
+        ),
+    ),
+    pytest.param(
+        MflowAdapter,
+        id="m-flow",
+        marks=pytest.mark.skipif(
+            not _mflow_available(),
+            reason="mflow-ai not installed; pip install mflow-ai",
         ),
     ),
 ]

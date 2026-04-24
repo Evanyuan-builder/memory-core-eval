@@ -19,10 +19,24 @@ from mceval.adapters.bm25_baseline import BM25BaselineAdapter
 from mceval.adapters.dense_baseline import DenseBaselineAdapter
 from mceval.adapters.hybrid_rrf_baseline import HybridRRFBaselineAdapter
 from mceval.adapters.memory_core import MemoryCoreAdapter
+from mceval.datasets.locomo import load_locomo
 from mceval.datasets.longmemeval import SPLIT_FILENAMES, load_longmemeval
 from mceval.eval.runner import run_eval
 from mceval.eval.scorer import QuestionResult
 from mceval.eval.trace import TraceWriter
+
+
+def _make_hindsight(base_url=None, api_key=None, **_):
+    # Deferred import: hindsight-client is optional.
+    from mceval.adapters.hindsight import HindsightAdapter
+    return HindsightAdapter(base_url=base_url, api_key=api_key)
+
+
+def _make_mflow(base_url=None, api_key=None, **_):
+    # Deferred import: mflow-ai is optional.
+    from mceval.adapters.mflow import MflowAdapter
+    return MflowAdapter(base_url=base_url, api_key=api_key)
+
 
 # Adapter registry: name -> factory accepting CLI kwargs
 ADAPTERS: dict[str, Callable[..., MemoryAdapter]] = {
@@ -32,7 +46,32 @@ ADAPTERS: dict[str, Callable[..., MemoryAdapter]] = {
     "memory-core": lambda base_url=None, api_key=None, **_: MemoryCoreAdapter(
         base_url=base_url, api_key=api_key
     ),
+    "hindsight": _make_hindsight,
+    "m-flow": _make_mflow,
 }
+
+
+def _load_dataset(args: argparse.Namespace) -> tuple[list[dict], str, str]:
+    """Return (items, dataset_name, display_tag) honoring --dataset.
+
+    ``--split`` only applies to longmemeval; ignored (with note) for locomo.
+    """
+    if args.dataset == "longmemeval":
+        items = load_longmemeval(
+            split=args.split,
+            sample=args.sample,
+            seed=args.seed,
+            stratified=args.stratified,
+        )
+        return items, f"longmemeval-{args.split}", f"LongMemEval-{args.split}"
+    if args.dataset == "locomo":
+        items = load_locomo(
+            sample=args.sample,
+            seed=args.seed,
+            stratified=args.stratified,
+        )
+        return items, "locomo", "LoCoMo"
+    raise SystemExit(f"unknown dataset: {args.dataset!r}")
 
 
 def _build_adapter(name: str, args: argparse.Namespace) -> MemoryAdapter:
@@ -99,14 +138,9 @@ def _result_to_dict(r: QuestionResult) -> dict:
 
 
 def cmd_run(args: argparse.Namespace) -> int:
-    dataset = load_longmemeval(
-        split=args.split,
-        sample=args.sample,
-        seed=args.seed,
-        stratified=args.stratified,
-    )
+    dataset, dataset_name, display = _load_dataset(args)
     tag = "stratified" if args.stratified else (f"seed={args.seed}" if args.seed is not None else "head")
-    print(f"Loaded {len(dataset)} LongMemEval-{args.split} questions ({tag})")
+    print(f"Loaded {len(dataset)} {display} questions ({tag})")
 
     adapter = _build_adapter(args.adapter, args)
     print(f"Running adapter: {adapter.name}  (workers={args.workers})")
@@ -119,6 +153,7 @@ def cmd_run(args: argparse.Namespace) -> int:
             workers=args.workers,
             on_progress=_progress_line if args.verbose else None,
             trace_writer=trace_writer,
+            dataset_name=dataset_name,
         )
     finally:
         if trace_writer:
@@ -135,14 +170,9 @@ def cmd_run(args: argparse.Namespace) -> int:
 
 def cmd_compare(args: argparse.Namespace) -> int:
     adapters = [a.strip() for a in args.adapters.split(",") if a.strip()]
-    dataset = load_longmemeval(
-        split=args.split,
-        sample=args.sample,
-        seed=args.seed,
-        stratified=args.stratified,
-    )
+    dataset, dataset_name, display = _load_dataset(args)
     tag = "stratified" if args.stratified else (f"seed={args.seed}" if args.seed is not None else "head")
-    print(f"Loaded {len(dataset)} LongMemEval-{args.split} questions ({tag}). "
+    print(f"Loaded {len(dataset)} {display} questions ({tag}). "
           f"Comparing: {', '.join(adapters)}\n")
 
     rows = []
@@ -153,6 +183,7 @@ def cmd_compare(args: argparse.Namespace) -> int:
             dataset=dataset,
             workers=args.workers,
             on_progress=None,
+            dataset_name=dataset_name,
         )
         rows.append((name, out.metrics, out.meta["elapsed_s"]))
         if args.out_dir:
@@ -181,6 +212,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     # shared
     def _add_common(sp: argparse.ArgumentParser) -> None:
+        sp.add_argument("--dataset", default="longmemeval", choices=["longmemeval", "locomo"],
+                        help="Benchmark to run (default: longmemeval). --split only applies to longmemeval.")
         sp.add_argument("--split", default="oracle", choices=sorted(SPLIT_FILENAMES),
                         help="LongMemEval split: oracle (default), s (session haystack), m (long-horizon)")
         sp.add_argument("--sample", type=int, default=None, help="Eval only N questions (see --seed / --stratified)")
