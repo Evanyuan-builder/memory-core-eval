@@ -16,6 +16,7 @@ import os
 import threading
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
+from datetime import datetime
 from typing import Optional
 
 import httpx
@@ -32,7 +33,7 @@ class MemoryCoreAdapter:
         self,
         base_url: Optional[str] = None,
         api_key: Optional[str] = None,
-        timeout: float = 120.0,
+        timeout: float = float(os.getenv("MCEVAL_HTTP_TIMEOUT", "300")),
     ) -> None:
         self.base_url = (
             base_url
@@ -59,12 +60,31 @@ class MemoryCoreAdapter:
         self._content_to_session: dict[str, dict[str, str]] = defaultdict(dict)
         self._map_lock = threading.Lock()
 
+        # Per-namespace pending-store buffer. The mceval runner stores
+        # all turns for a question in a tight loop and then issues one
+        # search; on the LanceDB backend, single-row table.add() is ~360×
+        # slower than a batch add. We buffer here and flush as one
+        # POST /memories/batch call before any search() (or reset)
+        # touches the same namespace, so read-after-write is preserved.
+        # Default is "always buffer"; set MCEVAL_BATCH_STORE=0 to disable.
+        self._batch_store_enabled = (
+            os.getenv("MCEVAL_BATCH_STORE", "1").lower() not in ("0", "false", "no")
+        )
+        self._batch_size = int(os.getenv("MCEVAL_BATCH_STORE_SIZE", "500"))
+        self._buffers: dict[str, list[dict]] = defaultdict(list)
+        self._buf_lock = threading.Lock()
+
     def reset(self, namespace: str) -> None:
         """Best-effort cleanup: list all memories in the namespace via the
         manifest endpoint and delete them in parallel. The server has no
         bulk-delete endpoint, so we pay one DELETE per memory. Safe to call
         on an empty namespace.
         """
+        # Drop any pending buffered stores for this namespace before
+        # reset — otherwise we'd both clear the server and immediately
+        # re-store stale items the next time we touch this namespace.
+        with self._buf_lock:
+            self._buffers.pop(namespace, None)
         ids: list[str] = []
         cursor: Optional[str] = None
         while True:
@@ -96,34 +116,77 @@ class MemoryCoreAdapter:
         with self._map_lock:
             self._content_to_session.pop(namespace, None)
 
-    def store(self, namespace: str, turn: Turn) -> str:
+    def _build_store_payload(self, namespace: str, turn: Turn) -> dict[str, object]:
         tags = [
             f"session:{turn.session_id}",
             f"role:{turn.role}",
             f"turn:{turn.turn_idx}",
             f"session_idx:{turn.session_idx}",
         ]
-        payload = {
+        payload: dict[str, object] = {
             "content": turn.content,
             "namespace": namespace,
             "type": "observation",
             "tags": tags,
             "source_ref": f"session/{turn.session_id}/turn/{turn.turn_idx}",
         }
-        r = self._client.post("/api/v1/memories/", json=payload)
-        r.raise_for_status()
-        mem_id = r.json().get("id", "")
+        if turn.timestamp is not None:
+            payload["created_at"] = turn.timestamp.isoformat()
+        return payload
+
+    def _flush(self, namespace: str) -> None:
+        """Drain the per-namespace buffer via one /memories/batch call.
+        Caller is responsible for any concurrency control around the
+        store loop."""
+        with self._buf_lock:
+            pending = self._buffers.get(namespace, [])
+            self._buffers[namespace] = []
+        if not pending:
+            return
+        # Chunk to respect server-side batch size limit.
+        for i in range(0, len(pending), self._batch_size):
+            chunk = pending[i : i + self._batch_size]
+            r = self._client.post(
+                "/api/v1/memories/batch",
+                json={"memories": chunk, "max_parallelism": 8},
+            )
+            r.raise_for_status()
+
+    def store(self, namespace: str, turn: Turn) -> str:
+        payload = self._build_store_payload(namespace, turn)
         with self._map_lock:
             self._content_to_session[namespace][turn.content] = turn.session_id
-        return mem_id
 
-    def search(self, namespace: str, query: str, top_k: int) -> list[Memory]:
-        r = self._client.post("/api/v1/memories/search", json={
+        if not self._batch_store_enabled:
+            r = self._client.post("/api/v1/memories/", json=payload)
+            r.raise_for_status()
+            return r.json().get("id", "")
+
+        # Buffered path. Don't return a real id (the mceval runner only
+        # uses the id for adapters that need it; the recall scorer keys
+        # on session_id/turn_idx via tags, which are already attached).
+        with self._buf_lock:
+            self._buffers[namespace].append(payload)
+        return ""
+
+    def search(
+        self,
+        namespace: str,
+        query: str,
+        top_k: int,
+        as_of_date: datetime | None = None,
+    ) -> list[Memory]:
+        # Flush pending buffered stores before searching: read-after-write.
+        self._flush(namespace)
+        body: dict[str, object] = {
             "query": query,
             "namespace": namespace,
             "top_k": top_k,
             "min_score": 0.0,
-        })
+        }
+        if as_of_date is not None:
+            body["as_of_date"] = as_of_date.isoformat()
+        r = self._client.post("/api/v1/memories/search", json=body)
         r.raise_for_status()
         results = r.json().get("memories", [])
 
