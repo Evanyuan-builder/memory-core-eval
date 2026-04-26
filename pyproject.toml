@@ -27,8 +27,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dense = ["sentence-transformers>=2.2", "faiss-cpu>=1.7"]
-extras = ["mem0ai", "letta-client"]
+dense = ["sentence-transformers>=2.2"]
 dev = ["pytest>=7", "pytest-asyncio>=0.21", "ruff>=0.1"]
 
 [project.scripts]
