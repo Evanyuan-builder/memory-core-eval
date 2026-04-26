@@ -1,0 +1,3196 @@
+{
+  "meta": {
+    "timestamp": "2026-04-24T08:45:40.434337+00:00",
+    "adapter": "hybrid-rrf",
+    "dataset": "locomo",
+    "granularity": "turn-level",
+    "n_questions": 100,
+    "top_k_values": [
+      1,
+      5,
+      10
+    ],
+    "workers": 2,
+    "elapsed_s": 395.6
+  },
+  "metrics": {
+    "n_total": 100,
+    "n_answerable": 100,
+    "n_abstention": 0,
+    "overall": {
+      "recall@1": 50.0,
+      "recall@5": 78.0,
+      "recall@10": 85.0
+    },
+    "abstention": {},
+    "by_type": {
+      "category_1": {
+        "n": 14,
+        "recall@1": 28.6,
+        "recall@5": 78.6,
+        "recall@10": 85.7
+      },
+      "category_2": {
+        "n": 16,
+        "recall@1": 50.0,
+        "recall@5": 81.2,
+        "recall@10": 81.2
+      },
+      "category_3": {
+        "n": 4,
+        "recall@1": 50.0,
+        "recall@5": 50.0,
+        "recall@10": 50.0
+      },
+      "category_4": {
+        "n": 43,
+        "recall@1": 53.5,
+        "recall@5": 83.7,
+        "recall@10": 90.7
+      },
+      "category_5": {
+        "n": 23,
+        "recall@1": 56.5,
+        "recall@5": 69.6,
+        "recall@10": 82.6
+      }
+    }
+  },
+  "results": [
+    {
+      "question_id": "conv-26:q145",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 419,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-26:session_18"
+      ],
+      "retrieved_sessions": [
+        "conv-26:session_18",
+        "conv-26:session_8",
+        "conv-26:session_18",
+        "conv-26:session_10",
+        "conv-26:session_18",
+        "conv-26:session_4",
+        "conv-26:session_8",
+        "conv-26:session_18",
+        "conv-26:session_2",
+        "conv-26:session_6"
+      ],
+      "hypothesis": "The kids look so cute, Mel! I bet they bring lots of joy. How did they handle the accident?",
+      "error": null,
+      "elapsed_s": 6.381746125000063,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-26:q146",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 419,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-26:session_18"
+      ],
+      "retrieved_sessions": [
+        "conv-26:session_18",
+        "conv-26:session_8",
+        "conv-26:session_18",
+        "conv-26:session_18",
+        "conv-26:session_18",
+        "conv-26:session_18",
+        "conv-26:session_8",
+        "conv-26:session_10",
+        "conv-26:session_10",
+        "conv-26:session_7"
+      ],
+      "hypothesis": "The kids look so cute, Mel! I bet they bring lots of joy. How did they handle the accident?",
+      "error": null,
+      "elapsed_s": 6.379356458000984,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-26:q168",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 419,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-26:session_7"
+      ],
+      "retrieved_sessions": [
+        "conv-26:session_6",
+        "conv-26:session_1",
+        "conv-26:session_10",
+        "conv-26:session_4",
+        "conv-26:session_14",
+        "conv-26:session_7",
+        "conv-26:session_14",
+        "conv-26:session_9",
+        "conv-26:session_1",
+        "conv-26:session_14"
+      ],
+      "hypothesis": "Hey Caroline! Missed you. Anything new? Spill the beans!",
+      "error": null,
+      "elapsed_s": 5.122527542000171,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-26:q198",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 419,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-26:session_18"
+      ],
+      "retrieved_sessions": [
+        "conv-26:session_6",
+        "conv-26:session_18",
+        "conv-26:session_8",
+        "conv-26:session_3",
+        "conv-26:session_4",
+        "conv-26:session_12",
+        "conv-26:session_14",
+        "conv-26:session_10",
+        "conv-26:session_10",
+        "conv-26:session_17"
+      ],
+      "hypothesis": "Glad you have support, Caroline! Unconditional love is so important. Here's a pic of my family camping at the beach. We love it, it brings us closer!",
+      "error": null,
+      "elapsed_s": 5.120036250002158,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-26:q41",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 419,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-26:session_10"
+      ],
+      "retrieved_sessions": [
+        "conv-26:session_1",
+        "conv-26:session_6",
+        "conv-26:session_3",
+        "conv-26:session_8",
+        "conv-26:session_10",
+        "conv-26:session_10",
+        "conv-26:session_10",
+        "conv-26:session_12",
+        "conv-26:session_2",
+        "conv-26:session_19"
+      ],
+      "hypothesis": "Wow, that's cool, Caroline! What happened that was so awesome? Did you hear any inspiring stories?",
+      "error": null,
+      "elapsed_s": 5.122694707999472,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-26:q83",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 419,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-26:session_2"
+      ],
+      "retrieved_sessions": [
+        "conv-26:session_2",
+        "conv-26:session_2",
+        "conv-26:session_10",
+        "conv-26:session_6",
+        "conv-26:session_2",
+        "conv-26:session_15",
+        "conv-26:session_9",
+        "conv-26:session_18",
+        "conv-26:session_1",
+        "conv-26:session_7"
+      ],
+      "hypothesis": "That charity race sounds great, Mel! Making a difference & raising awareness for mental health is super rewarding - I'm really proud of you for taking part!",
+      "error": null,
+      "elapsed_s": 5.121425375000399,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-26:q96",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 419,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-26:session_4"
+      ],
+      "retrieved_sessions": [
+        "conv-26:session_4",
+        "conv-26:session_7",
+        "conv-26:session_4",
+        "conv-26:session_1",
+        "conv-26:session_7",
+        "conv-26:session_7",
+        "conv-26:session_7",
+        "conv-26:session_7",
+        "conv-26:session_2",
+        "conv-26:session_6"
+      ],
+      "hypothesis": "Sounds great! What kind of counseling and mental health services do you want to persue?",
+      "error": null,
+      "elapsed_s": 5.951389417001337,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-30:q16",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 369,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-30:session_10"
+      ],
+      "retrieved_sessions": [
+        "conv-30:session_14",
+        "conv-30:session_9",
+        "conv-30:session_4",
+        "conv-30:session_15",
+        "conv-30:session_1",
+        "conv-30:session_9",
+        "conv-30:session_13",
+        "conv-30:session_4",
+        "conv-30:session_17",
+        "conv-30:session_11"
+      ],
+      "hypothesis": "Way to go, Jon! Don't quit, remember, failures lead you closer to success. Here's a pic from when I was dancing - it was a tough road, but it was worth it!",
+      "error": null,
+      "elapsed_s": 5.250886000001628,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-30:q24",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 369,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-30:session_10",
+        "conv-30:session_16",
+        "conv-30:session_8"
+      ],
+      "retrieved_sessions": [
+        "conv-30:session_16",
+        "conv-30:session_10",
+        "conv-30:session_1",
+        "conv-30:session_8",
+        "conv-30:session_10",
+        "conv-30:session_2",
+        "conv-30:session_17",
+        "conv-30:session_18",
+        "conv-30:session_4",
+        "conv-30:session_10"
+      ],
+      "hypothesis": "Way to go, Jon! Attending those networking events takes guts and drive. Keep it up!",
+      "error": null,
+      "elapsed_s": 5.042096958997718,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-30:q49",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 369,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-30:session_3"
+      ],
+      "retrieved_sessions": [
+        "conv-30:session_4",
+        "conv-30:session_8",
+        "conv-30:session_3",
+        "conv-30:session_11",
+        "conv-30:session_3",
+        "conv-30:session_10",
+        "conv-30:session_12",
+        "conv-30:session_16",
+        "conv-30:session_3",
+        "conv-30:session_5"
+      ],
+      "hypothesis": "Hey Gina! What's up? How's the store going? I gotta tell you about this thing with my biz.",
+      "error": null,
+      "elapsed_s": 5.015643749997253,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-30:q60",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 369,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-30:session_9"
+      ],
+      "retrieved_sessions": [
+        "conv-30:session_1",
+        "conv-30:session_18",
+        "conv-30:session_17",
+        "conv-30:session_9",
+        "conv-30:session_18",
+        "conv-30:session_4",
+        "conv-30:session_11",
+        "conv-30:session_8",
+        "conv-30:session_11",
+        "conv-30:session_1"
+      ],
+      "hypothesis": "That's cool, Jon! What got you into this biz?",
+      "error": null,
+      "elapsed_s": 4.889558375001798,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-30:q62",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 369,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-30:session_10"
+      ],
+      "retrieved_sessions": [
+        "conv-30:session_7",
+        "conv-30:session_4",
+        "conv-30:session_10",
+        "conv-30:session_11",
+        "conv-30:session_5",
+        "conv-30:session_4",
+        "conv-30:session_8",
+        "conv-30:session_10",
+        "conv-30:session_17",
+        "conv-30:session_1"
+      ],
+      "hypothesis": "Hey Gina, how's it going?",
+      "error": null,
+      "elapsed_s": 4.933790790997591,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-30:q78",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 369,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-30:session_17"
+      ],
+      "retrieved_sessions": [
+        "conv-30:session_17",
+        "conv-30:session_1",
+        "conv-30:session_18",
+        "conv-30:session_13",
+        "conv-30:session_18",
+        "conv-30:session_10",
+        "conv-30:session_4",
+        "conv-30:session_13",
+        "conv-30:session_18",
+        "conv-30:session_18"
+      ],
+      "hypothesis": "Wow, Jon! That's awesome. Loving what you do and bringing joy to others is so rewarding. You're definitely the perfect mentor & guide. Your positivity and determination will make your dance studio a hit!",
+      "error": null,
+      "elapsed_s": 5.353217874999245,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q147",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_31"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_30",
+        "conv-41:session_31",
+        "conv-41:session_8",
+        "conv-41:session_8",
+        "conv-41:session_27",
+        "conv-41:session_31",
+        "conv-41:session_27",
+        "conv-41:session_2",
+        "conv-41:session_5",
+        "conv-41:session_18"
+      ],
+      "hypothesis": "Hey John! Long time no talk! Guess what - I got a puppy two weeks ago! Her name's Coco and she's adorable.",
+      "error": null,
+      "elapsed_s": 9.754303708999942,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q175",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-41:session_19"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_5",
+        "conv-41:session_7",
+        "conv-41:session_31",
+        "conv-41:session_6",
+        "conv-41:session_2",
+        "conv-41:session_27",
+        "conv-41:session_32",
+        "conv-41:session_12",
+        "conv-41:session_8",
+        "conv-41:session_8"
+      ],
+      "hypothesis": "Wow, Maria! That's really making a big impact. What made you decide to get involved with that?",
+      "error": null,
+      "elapsed_s": 9.322852000001149,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q176",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_19"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_19",
+        "conv-41:session_13",
+        "conv-41:session_9",
+        "conv-41:session_6",
+        "conv-41:session_7",
+        "conv-41:session_5",
+        "conv-41:session_30",
+        "conv-41:session_22",
+        "conv-41:session_30",
+        "conv-41:session_21"
+      ],
+      "hypothesis": "Thanks, Maria! I was really excited. It feels like all the hard work I've put in has paid off now that I'm an assistant manager- it's like a stepping stone for bigger things.",
+      "error": null,
+      "elapsed_s": 8.699710875000164,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q177",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_21"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_21",
+        "conv-41:session_6",
+        "conv-41:session_15",
+        "conv-41:session_13",
+        "conv-41:session_17",
+        "conv-41:session_15",
+        "conv-41:session_32",
+        "conv-41:session_26",
+        "conv-41:session_21",
+        "conv-41:session_13"
+      ],
+      "hypothesis": "A car ran a red light and hit us, but thankfully everyone is okay. Besides that, my cousin just had a tough time recently, so I'm lending a hand in helping her find a new place.",
+      "error": null,
+      "elapsed_s": 8.671462375001283,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q18",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_10",
+        "conv-41:session_7"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_25",
+        "conv-41:session_25",
+        "conv-41:session_25",
+        "conv-41:session_10",
+        "conv-41:session_10",
+        "conv-41:session_24",
+        "conv-41:session_7",
+        "conv-41:session_19",
+        "conv-41:session_18",
+        "conv-41:session_15"
+      ],
+      "hypothesis": "Yup, it's a yoga studio I go to often. The vibe is really chill and the instructors are awesome.",
+      "error": null,
+      "elapsed_s": 8.88176541699795,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q185",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-41:session_28"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_5",
+        "conv-41:session_27",
+        "conv-41:session_13",
+        "conv-41:session_24",
+        "conv-41:session_27",
+        "conv-41:session_23",
+        "conv-41:session_31",
+        "conv-41:session_31",
+        "conv-41:session_21",
+        "conv-41:session_7"
+      ],
+      "hypothesis": "Wow, Maria! That's really making a big impact. What made you decide to get involved with that?",
+      "error": null,
+      "elapsed_s": 8.96343275000254,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q19",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_11",
+        "conv-41:session_4"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_23",
+        "conv-41:session_2",
+        "conv-41:session_5",
+        "conv-41:session_13",
+        "conv-41:session_18",
+        "conv-41:session_21",
+        "conv-41:session_1",
+        "conv-41:session_21",
+        "conv-41:session_21",
+        "conv-41:session_11"
+      ],
+      "hypothesis": "Sorry to hear about what happened in your area, John. That must have been tough for you and everyone there. Is there anything I can do to help?",
+      "error": null,
+      "elapsed_s": 9.22668737499771,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q22",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_12"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_12",
+        "conv-41:session_19",
+        "conv-41:session_15",
+        "conv-41:session_24",
+        "conv-41:session_6",
+        "conv-41:session_9",
+        "conv-41:session_13",
+        "conv-41:session_13",
+        "conv-41:session_11",
+        "conv-41:session_15"
+      ],
+      "hypothesis": "My colleagues and I went to a convention together last month. We're all passionate about using tech for good in our community. It was great to connect with like-minded folks and swap ideas. It's inspiring to see people united in their goal.",
+      "error": null,
+      "elapsed_s": 9.227440792001289,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q78",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_8"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_8",
+        "conv-41:session_8",
+        "conv-41:session_5",
+        "conv-41:session_30",
+        "conv-41:session_12",
+        "conv-41:session_31",
+        "conv-41:session_31",
+        "conv-41:session_19",
+        "conv-41:session_1",
+        "conv-41:session_26"
+      ],
+      "hypothesis": "Thanks for your support, John. How's your family doing? That baby in the pic is adorable! What's their name?",
+      "error": null,
+      "elapsed_s": 8.925198540997371,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-41:q97",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 663,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-41:session_14"
+      ],
+      "retrieved_sessions": [
+        "conv-41:session_7",
+        "conv-41:session_24",
+        "conv-41:session_14",
+        "conv-41:session_4",
+        "conv-41:session_14",
+        "conv-41:session_6",
+        "conv-41:session_6",
+        "conv-41:session_5",
+        "conv-41:session_8",
+        "conv-41:session_24"
+      ],
+      "hypothesis": "Wow, Maria! How did she end up in such a situation, and how did she remain positive throughout?",
+      "error": null,
+      "elapsed_s": 8.801016624998738,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q10",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_2",
+        "conv-42:session_3"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_29",
+        "conv-42:session_3",
+        "conv-42:session_27",
+        "conv-42:session_4",
+        "conv-42:session_1",
+        "conv-42:session_13",
+        "conv-42:session_4",
+        "conv-42:session_2",
+        "conv-42:session_2",
+        "conv-42:session_23"
+      ],
+      "hypothesis": "One of the actors came up to me and told me how much she liked my script! I was so excited when that happened - it gave me chills!",
+      "error": null,
+      "elapsed_s": 8.104132208998635,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q115",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-42:session_9"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_29",
+        "conv-42:session_1",
+        "conv-42:session_27",
+        "conv-42:session_2",
+        "conv-42:session_16",
+        "conv-42:session_4",
+        "conv-42:session_27",
+        "conv-42:session_24",
+        "conv-42:session_15",
+        "conv-42:session_1"
+      ],
+      "hypothesis": "No worries, Joanna. Hope you enjoy it!",
+      "error": null,
+      "elapsed_s": 8.047470333000092,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q132",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_16"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_4",
+        "conv-42:session_16",
+        "conv-42:session_24",
+        "conv-42:session_25",
+        "conv-42:session_22",
+        "conv-42:session_18",
+        "conv-42:session_18",
+        "conv-42:session_22",
+        "conv-42:session_1",
+        "conv-42:session_28"
+      ],
+      "hypothesis": "No worries, Nate! Glad to hear it. What flavor did you make?",
+      "error": null,
+      "elapsed_s": 8.097172875000979,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q137",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_17"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_17",
+        "conv-42:session_26",
+        "conv-42:session_27",
+        "conv-42:session_12",
+        "conv-42:session_26",
+        "conv-42:session_22",
+        "conv-42:session_13",
+        "conv-42:session_11",
+        "conv-42:session_5",
+        "conv-42:session_21"
+      ],
+      "hypothesis": "Thanks, Joanna! Your support means a lot to me. That road trip sounds great! Where did you go? Did you discover any interesting places?",
+      "error": null,
+      "elapsed_s": 8.166007957999682,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q154",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_21"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_21",
+        "conv-42:session_29",
+        "conv-42:session_16",
+        "conv-42:session_21",
+        "conv-42:session_4",
+        "conv-42:session_1",
+        "conv-42:session_28",
+        "conv-42:session_4",
+        "conv-42:session_4",
+        "conv-42:session_22"
+      ],
+      "hypothesis": "Hey Joanna, I'm no writer like you, but something pretty awesome happened. Last Monday I got to teach people vegan ice cream recipes on my own cooking show! It was a bit nerve-wracking to put myself out there, but it was a blast. Plus, I picked up a few new recipes!",
+      "error": null,
+      "elapsed_s": 8.18967908400009,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q186",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_28"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_21",
+        "conv-42:session_1",
+        "conv-42:session_4",
+        "conv-42:session_22",
+        "conv-42:session_22",
+        "conv-42:session_10",
+        "conv-42:session_18",
+        "conv-42:session_26",
+        "conv-42:session_28",
+        "conv-42:session_1"
+      ],
+      "hypothesis": "Way to go, Nate! Congrats on the cooking show, I'll definitely be tuning in! What's your favorite dish from the show?",
+      "error": null,
+      "elapsed_s": 8.18954791699798,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q196",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_29"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_29",
+        "conv-42:session_22",
+        "conv-42:session_4",
+        "conv-42:session_1",
+        "conv-42:session_22",
+        "conv-42:session_2",
+        "conv-42:session_19",
+        "conv-42:session_21",
+        "conv-42:session_28",
+        "conv-42:session_10"
+      ],
+      "hypothesis": "Wow Joanna, that must have been so exciting! It's incredible when you get those moments of joy. Anyway, I took my turtles to the beach in Tampa yesterday! They always bring me peace in the craziness of life.",
+      "error": null,
+      "elapsed_s": 8.168510583996976,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q210",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_4"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_4",
+        "conv-42:session_10",
+        "conv-42:session_21",
+        "conv-42:session_1",
+        "conv-42:session_21",
+        "conv-42:session_22",
+        "conv-42:session_26",
+        "conv-42:session_22",
+        "conv-42:session_21",
+        "conv-42:session_3"
+      ],
+      "hypothesis": "No worries, Nate! Glad to hear it. What flavor did you make?",
+      "error": null,
+      "elapsed_s": 8.107135792000918,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q234",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_21"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_21",
+        "conv-42:session_21",
+        "conv-42:session_21",
+        "conv-42:session_21",
+        "conv-42:session_4",
+        "conv-42:session_20",
+        "conv-42:session_20",
+        "conv-42:session_26",
+        "conv-42:session_10",
+        "conv-42:session_22"
+      ],
+      "hypothesis": "Hey Nate, my favorite dairy-free treat is this amazing chocolate raspberry tart. It has an almond flour crust, chocolate ganache, and fresh raspberries - it's delicious!",
+      "error": null,
+      "elapsed_s": 7.99815212500107,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q235",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_21"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_21",
+        "conv-42:session_10",
+        "conv-42:session_21",
+        "conv-42:session_18",
+        "conv-42:session_21",
+        "conv-42:session_20",
+        "conv-42:session_10",
+        "conv-42:session_26",
+        "conv-42:session_3",
+        "conv-42:session_21"
+      ],
+      "hypothesis": "Hey Nate! Here's another recipe I like. It's a delicious dessert made with blueberries, coconut milk, and a gluten-free crust. So creamy and delicious!",
+      "error": null,
+      "elapsed_s": 7.895096541000385,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q249",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-42:session_27"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_1",
+        "conv-42:session_21",
+        "conv-42:session_17",
+        "conv-42:session_1",
+        "conv-42:session_2",
+        "conv-42:session_26",
+        "conv-42:session_28",
+        "conv-42:session_28",
+        "conv-42:session_3",
+        "conv-42:session_2"
+      ],
+      "hypothesis": "Hey Joanna! Long time no see! What's up? Anything fun going on?",
+      "error": null,
+      "elapsed_s": 7.870433791998948,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q33",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_18"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_26",
+        "conv-42:session_27",
+        "conv-42:session_21",
+        "conv-42:session_17",
+        "conv-42:session_18",
+        "conv-42:session_28",
+        "conv-42:session_27",
+        "conv-42:session_27",
+        "conv-42:session_26",
+        "conv-42:session_19"
+      ],
+      "hypothesis": "Wow Joanna, nice work! How did it go with those producer meetings?",
+      "error": null,
+      "elapsed_s": 7.870123458000307,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-42:q78",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 629,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-42:session_1",
+        "conv-42:session_10",
+        "conv-42:session_14",
+        "conv-42:session_17",
+        "conv-42:session_19",
+        "conv-42:session_20",
+        "conv-42:session_22",
+        "conv-42:session_27",
+        "conv-42:session_6"
+      ],
+      "retrieved_sessions": [
+        "conv-42:session_10",
+        "conv-42:session_28",
+        "conv-42:session_1",
+        "conv-42:session_14",
+        "conv-42:session_1",
+        "conv-42:session_6",
+        "conv-42:session_24",
+        "conv-42:session_28",
+        "conv-42:session_17",
+        "conv-42:session_14"
+      ],
+      "hypothesis": "Gaming has been my focus - practicing a lot and even winning a few tournaments. Last week I won my second tournament!",
+      "error": null,
+      "elapsed_s": 7.954209083000023,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q100",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_9"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_9",
+        "conv-43:session_9",
+        "conv-43:session_21",
+        "conv-43:session_28",
+        "conv-43:session_12",
+        "conv-43:session_6",
+        "conv-43:session_28",
+        "conv-43:session_15",
+        "conv-43:session_6",
+        "conv-43:session_26"
+      ],
+      "hypothesis": "Thanks for the pic! That group looks like a great squad. How long did you all play together?",
+      "error": null,
+      "elapsed_s": 8.82347558300171,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q101",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_9"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_9",
+        "conv-43:session_6",
+        "conv-43:session_9",
+        "conv-43:session_13",
+        "conv-43:session_26",
+        "conv-43:session_29",
+        "conv-43:session_25",
+        "conv-43:session_26",
+        "conv-43:session_9",
+        "conv-43:session_15"
+      ],
+      "hypothesis": "Wow, Tim, that's an awesome book collection! It's cool to escape to different worlds with a hobby. By the way, I love discovering new cities - check out this pic from one of my trips to New York City!",
+      "error": null,
+      "elapsed_s": 8.808735792001244,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q12",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_3"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_3",
+        "conv-43:session_15",
+        "conv-43:session_3",
+        "conv-43:session_3",
+        "conv-43:session_26",
+        "conv-43:session_14",
+        "conv-43:session_24",
+        "conv-43:session_17",
+        "conv-43:session_24",
+        "conv-43:session_26"
+      ],
+      "hypothesis": "Wow! How long have you been surfing?",
+      "error": null,
+      "elapsed_s": 8.7443187079989,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q168",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_27"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_27",
+        "conv-43:session_27",
+        "conv-43:session_26",
+        "conv-43:session_27",
+        "conv-43:session_27",
+        "conv-43:session_27",
+        "conv-43:session_22",
+        "conv-43:session_27",
+        "conv-43:session_24",
+        "conv-43:session_16"
+      ],
+      "hypothesis": "Wow, Aragorn's story is so inspiring - from a ranger to king of Gondor. It's amazing how he grows and achieves redemption throughout his journey.",
+      "error": null,
+      "elapsed_s": 8.82603087499956,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q202",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-43:session_10"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_3",
+        "conv-43:session_27",
+        "conv-43:session_1",
+        "conv-43:session_29",
+        "conv-43:session_11",
+        "conv-43:session_28",
+        "conv-43:session_12",
+        "conv-43:session_3",
+        "conv-43:session_4",
+        "conv-43:session_27"
+      ],
+      "hypothesis": "Wow, amazing view! Where's that? What's got you so excited?",
+      "error": null,
+      "elapsed_s": 8.899528124999051,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q232",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_26"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_26",
+        "conv-43:session_2",
+        "conv-43:session_17",
+        "conv-43:session_15",
+        "conv-43:session_27",
+        "conv-43:session_12",
+        "conv-43:session_15",
+        "conv-43:session_27",
+        "conv-43:session_15",
+        "conv-43:session_27"
+      ],
+      "hypothesis": "Definitely. Making a difference is important to me. I use my influence and resources to help causes I believe in. It's about making the world a better place. Here's a picture of me speaking at a charity event.",
+      "error": null,
+      "elapsed_s": 8.826793542000814,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q45",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_18"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_18",
+        "conv-43:session_25",
+        "conv-43:session_12",
+        "conv-43:session_9",
+        "conv-43:session_29",
+        "conv-43:session_7",
+        "conv-43:session_11",
+        "conv-43:session_26",
+        "conv-43:session_24",
+        "conv-43:session_17"
+      ],
+      "hypothesis": "Hey Tim! That's awesome! Yeah, it was really cool. Oh man, it's been a tough week for me with this injury. But I'm staying positive. How about you? How's your week been?",
+      "error": null,
+      "elapsed_s": 8.709318749999511,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q69",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_28"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_28",
+        "conv-43:session_11",
+        "conv-43:session_28",
+        "conv-43:session_29",
+        "conv-43:session_17",
+        "conv-43:session_1",
+        "conv-43:session_14",
+        "conv-43:session_16",
+        "conv-43:session_18",
+        "conv-43:session_23"
+      ],
+      "hypothesis": "Hey John, long time no talk. On Friday, I got great news - I'm finally in the study abroad program I applied for! Next month, I'm off to Ireland for a semester.",
+      "error": null,
+      "elapsed_s": 8.71373224999843,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q8",
+      "question_type": "category_3",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_25",
+        "conv-43:session_3"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_25",
+        "conv-43:session_3",
+        "conv-43:session_11",
+        "conv-43:session_25",
+        "conv-43:session_29",
+        "conv-43:session_25",
+        "conv-43:session_2",
+        "conv-43:session_24",
+        "conv-43:session_29",
+        "conv-43:session_7"
+      ],
+      "hypothesis": "Yo Tim! Great to hear from you. Things have been wild! Last week I got this amazing deal with a renowned outdoor gear company. So pumped!",
+      "error": null,
+      "elapsed_s": 8.732381833997351,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q87",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_5"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_5",
+        "conv-43:session_15",
+        "conv-43:session_9",
+        "conv-43:session_25",
+        "conv-43:session_5",
+        "conv-43:session_7",
+        "conv-43:session_23",
+        "conv-43:session_29",
+        "conv-43:session_29",
+        "conv-43:session_24"
+      ],
+      "hypothesis": "Our team bond is awesome and it makes all the hard work worth it.",
+      "error": null,
+      "elapsed_s": 8.754799624999578,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-43:q93",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 680,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-43:session_7"
+      ],
+      "retrieved_sessions": [
+        "conv-43:session_7",
+        "conv-43:session_7",
+        "conv-43:session_6",
+        "conv-43:session_16",
+        "conv-43:session_11",
+        "conv-43:session_12",
+        "conv-43:session_15",
+        "conv-43:session_26",
+        "conv-43:session_28",
+        "conv-43:session_22"
+      ],
+      "hypothesis": "That's so cool of your teammates. Did they sign it for a special reason?",
+      "error": null,
+      "elapsed_s": 8.78370145900044,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-44:q101",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 675,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-44:session_22"
+      ],
+      "retrieved_sessions": [
+        "conv-44:session_22",
+        "conv-44:session_22",
+        "conv-44:session_22",
+        "conv-44:session_17",
+        "conv-44:session_22",
+        "conv-44:session_10",
+        "conv-44:session_28",
+        "conv-44:session_19",
+        "conv-44:session_27",
+        "conv-44:session_10"
+      ],
+      "hypothesis": "Thanks! I started making jewelry as a hobby and then started selling it. I donate a portion of my profits to a cause that's close to my heart. It's a way to combine two of my passions - making jewelry and making a difference. It's great that customers not only enjoy my work but also support a cause!",
+      "error": null,
+      "elapsed_s": 8.806183458000305,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-44:q35",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 675,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-44:session_12",
+        "conv-44:session_24",
+        "conv-44:session_28"
+      ],
+      "retrieved_sessions": [
+        "conv-44:session_1",
+        "conv-44:session_20",
+        "conv-44:session_28",
+        "conv-44:session_11",
+        "conv-44:session_23",
+        "conv-44:session_1",
+        "conv-44:session_15",
+        "conv-44:session_10",
+        "conv-44:session_26",
+        "conv-44:session_10"
+      ],
+      "hypothesis": "Cute little guys! What are their names and how long have you had them?",
+      "error": null,
+      "elapsed_s": 8.835208541997417,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-44:q40",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 675,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-44:session_14",
+        "conv-44:session_23",
+        "conv-44:session_4"
+      ],
+      "retrieved_sessions": [
+        "conv-44:session_5",
+        "conv-44:session_23",
+        "conv-44:session_4",
+        "conv-44:session_18",
+        "conv-44:session_11",
+        "conv-44:session_5",
+        "conv-44:session_11",
+        "conv-44:session_27",
+        "conv-44:session_9",
+        "conv-44:session_8"
+      ],
+      "hypothesis": "I'm looking for a place near a park or woods, so I can stay close to nature and give the dog a large open space to run around",
+      "error": null,
+      "elapsed_s": 8.70441579099861,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-44:q56",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 675,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-44:session_28",
+        "conv-44:session_5"
+      ],
+      "retrieved_sessions": [
+        "conv-44:session_24",
+        "conv-44:session_2",
+        "conv-44:session_20",
+        "conv-44:session_2",
+        "conv-44:session_9",
+        "conv-44:session_24",
+        "conv-44:session_15",
+        "conv-44:session_26",
+        "conv-44:session_1",
+        "conv-44:session_9"
+      ],
+      "hypothesis": "Wow! That's awesome news! How's he doing in his new home?",
+      "error": null,
+      "elapsed_s": 8.580315833001805,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q107",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_18"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_25",
+        "conv-47:session_25",
+        "conv-47:session_8",
+        "conv-47:session_18",
+        "conv-47:session_28",
+        "conv-47:session_11",
+        "conv-47:session_1",
+        "conv-47:session_23",
+        "conv-47:session_29",
+        "conv-47:session_21"
+      ],
+      "hypothesis": "Hey John! What new has happened in your life?",
+      "error": null,
+      "elapsed_s": 8.690103291999549,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q11",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-47:session_6"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_8",
+        "conv-47:session_12",
+        "conv-47:session_31",
+        "conv-47:session_7",
+        "conv-47:session_30",
+        "conv-47:session_11",
+        "conv-47:session_18",
+        "conv-47:session_10",
+        "conv-47:session_27",
+        "conv-47:session_7"
+      ],
+      "hypothesis": "Hey John! What's up? Anything fun going on?",
+      "error": null,
+      "elapsed_s": 8.662041916999442,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q143",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_29"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_19",
+        "conv-47:session_29",
+        "conv-47:session_23",
+        "conv-47:session_23",
+        "conv-47:session_31",
+        "conv-47:session_19",
+        "conv-47:session_27",
+        "conv-47:session_18",
+        "conv-47:session_30",
+        "conv-47:session_28"
+      ],
+      "hypothesis": "She is Samantha. I'll definitely call her!",
+      "error": null,
+      "elapsed_s": 8.763072707999527,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q147",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_30"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_30",
+        "conv-47:session_4",
+        "conv-47:session_28",
+        "conv-47:session_19",
+        "conv-47:session_26",
+        "conv-47:session_28",
+        "conv-47:session_18",
+        "conv-47:session_17",
+        "conv-47:session_15",
+        "conv-47:session_4"
+      ],
+      "hypothesis": "You need to practice a little first, and then we can play together.",
+      "error": null,
+      "elapsed_s": 8.700953542000207,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q148",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_31"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_1",
+        "conv-47:session_31",
+        "conv-47:session_31",
+        "conv-47:session_31",
+        "conv-47:session_6",
+        "conv-47:session_27",
+        "conv-47:session_21",
+        "conv-47:session_7",
+        "conv-47:session_8",
+        "conv-47:session_25"
+      ],
+      "hypothesis": "Wow, James! That's amazing. What made you decide to work on it and create your own game?",
+      "error": null,
+      "elapsed_s": 8.694858582999586,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q154",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_7"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_7",
+        "conv-47:session_10",
+        "conv-47:session_25",
+        "conv-47:session_1",
+        "conv-47:session_13",
+        "conv-47:session_30",
+        "conv-47:session_7",
+        "conv-47:session_1",
+        "conv-47:session_19",
+        "conv-47:session_4"
+      ],
+      "hypothesis": "Thanks, James. Yeah, been super busy at work. Deadlines all over the place and so much to do. It's just been really hectic lately.",
+      "error": null,
+      "elapsed_s": 9.108623666001222,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q158",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_11"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_11",
+        "conv-47:session_1",
+        "conv-47:session_22",
+        "conv-47:session_6",
+        "conv-47:session_28",
+        "conv-47:session_11",
+        "conv-47:session_11",
+        "conv-47:session_19",
+        "conv-47:session_11",
+        "conv-47:session_31"
+      ],
+      "hypothesis": "Yeah, here's a screenshot of the system. It'll make tracking inventory, resources, and donations run smoother and generate reports for analysis. Feels great knowing my skills are making a real difference to them.",
+      "error": null,
+      "elapsed_s": 9.348195375001524,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q172",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_23"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_23",
+        "conv-47:session_23",
+        "conv-47:session_28",
+        "conv-47:session_8",
+        "conv-47:session_27",
+        "conv-47:session_19",
+        "conv-47:session_22",
+        "conv-47:session_28",
+        "conv-47:session_6",
+        "conv-47:session_1"
+      ],
+      "hypothesis": "At only $10 per class, it's very cheap! Also, I made meringue there and they taught us how to make the dough.",
+      "error": null,
+      "elapsed_s": 9.206179250002606,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q178",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_25"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_25",
+        "conv-47:session_1",
+        "conv-47:session_25",
+        "conv-47:session_19",
+        "conv-47:session_27",
+        "conv-47:session_21",
+        "conv-47:session_25",
+        "conv-47:session_21",
+        "conv-47:session_26",
+        "conv-47:session_5"
+      ],
+      "hypothesis": "It is filled with awesome tips and insights on game design. I also watch tutorials and keep up with developer forums for information and ideas. Basically, staying informed and constantly learning is key!",
+      "error": null,
+      "elapsed_s": 9.556105875002686,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q183",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_29"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_16",
+        "conv-47:session_3",
+        "conv-47:session_27",
+        "conv-47:session_29",
+        "conv-47:session_26",
+        "conv-47:session_28",
+        "conv-47:session_30",
+        "conv-47:session_10",
+        "conv-47:session_4",
+        "conv-47:session_4"
+      ],
+      "hypothesis": "Hey James! Congrats on winning the online gaming tournament! It's super fulfilling to see your hard work pay off. So happy for you!",
+      "error": null,
+      "elapsed_s": 10.17592779199913,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q186",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_29"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_29",
+        "conv-47:session_23",
+        "conv-47:session_29",
+        "conv-47:session_21",
+        "conv-47:session_21",
+        "conv-47:session_23",
+        "conv-47:session_29",
+        "conv-47:session_29",
+        "conv-47:session_21",
+        "conv-47:session_7"
+      ],
+      "hypothesis": "Of course, this was a mutual and informed decision. We rented an apartment not far from McGee's bar.",
+      "error": null,
+      "elapsed_s": 9.660709499999939,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q27",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_13",
+        "conv-47:session_23"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_19",
+        "conv-47:session_13",
+        "conv-47:session_28",
+        "conv-47:session_26",
+        "conv-47:session_22",
+        "conv-47:session_1",
+        "conv-47:session_3",
+        "conv-47:session_28",
+        "conv-47:session_30",
+        "conv-47:session_17"
+      ],
+      "hypothesis": "Thanks James! What's new with you?",
+      "error": null,
+      "elapsed_s": 8.914702417001536,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q43",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_20"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_21",
+        "conv-47:session_21",
+        "conv-47:session_28",
+        "conv-47:session_20",
+        "conv-47:session_20",
+        "conv-47:session_23",
+        "conv-47:session_6",
+        "conv-47:session_17",
+        "conv-47:session_31",
+        "conv-47:session_6"
+      ],
+      "hypothesis": "His name's Ned and he's been awesome since I adopted him. I can't imagine life without him. It's great to hear that your siblings signed up for programming.",
+      "error": null,
+      "elapsed_s": 8.941341959001875,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q59",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_29"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_10",
+        "conv-47:session_10",
+        "conv-47:session_29",
+        "conv-47:session_12",
+        "conv-47:session_16",
+        "conv-47:session_10",
+        "conv-47:session_4",
+        "conv-47:session_4",
+        "conv-47:session_26",
+        "conv-47:session_18"
+      ],
+      "hypothesis": "Wow John, organizing that tournament for charity must have been a ton of effort, but it sounds like it was so worth it!",
+      "error": null,
+      "elapsed_s": 8.881597332998354,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q88",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_10"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_31",
+        "conv-47:session_8",
+        "conv-47:session_28",
+        "conv-47:session_25",
+        "conv-47:session_30",
+        "conv-47:session_31",
+        "conv-47:session_11",
+        "conv-47:session_10",
+        "conv-47:session_19",
+        "conv-47:session_12"
+      ],
+      "hypothesis": "Hey John! Guess what? Me and my family are currently on the road trip! We`ve already visited my friends Josh and Mark and had such a great time!",
+      "error": null,
+      "elapsed_s": 8.808379707999848,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-47:q92",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 689,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-47:session_11"
+      ],
+      "retrieved_sessions": [
+        "conv-47:session_11",
+        "conv-47:session_28",
+        "conv-47:session_11",
+        "conv-47:session_10",
+        "conv-47:session_11",
+        "conv-47:session_11",
+        "conv-47:session_11",
+        "conv-47:session_29",
+        "conv-47:session_31",
+        "conv-47:session_1"
+      ],
+      "hypothesis": "Yeah, here's a screenshot of the system. It'll make tracking inventory, resources, and donations run smoother and generate reports for analysis. Feels great knowing my skills are making a real difference to them.",
+      "error": null,
+      "elapsed_s": 9.094411374997435,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q136",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_14"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_14",
+        "conv-48:session_20",
+        "conv-48:session_23",
+        "conv-48:session_28",
+        "conv-48:session_20",
+        "conv-48:session_4",
+        "conv-48:session_14",
+        "conv-48:session_20",
+        "conv-48:session_11",
+        "conv-48:session_12"
+      ],
+      "hypothesis": "I'd rather show you a photo. This is also a new yoga pose that we tried. It is a tree pose.",
+      "error": null,
+      "elapsed_s": 8.93679025000165,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q150",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_19"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_19",
+        "conv-48:session_24",
+        "conv-48:session_24",
+        "conv-48:session_19",
+        "conv-48:session_19",
+        "conv-48:session_15",
+        "conv-48:session_20",
+        "conv-48:session_2",
+        "conv-48:session_2",
+        "conv-48:session_14"
+      ],
+      "hypothesis": "I have a few game recommendations. Zelda BOTW for Switch is an awesome open-world game. Animal Crossing: New Horizons is really calming and cute. As for my favorite game, it's hard to choose just one!",
+      "error": null,
+      "elapsed_s": 8.635034499999165,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q16",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_2"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_22",
+        "conv-48:session_2",
+        "conv-48:session_6",
+        "conv-48:session_9",
+        "conv-48:session_2",
+        "conv-48:session_15",
+        "conv-48:session_15",
+        "conv-48:session_22",
+        "conv-48:session_22",
+        "conv-48:session_23"
+      ],
+      "hypothesis": "My snakes just like watching me chill. But she's a great company and always brings a sense of calm.",
+      "error": null,
+      "elapsed_s": 8.614981582999462,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q192",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_4"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_19",
+        "conv-48:session_26",
+        "conv-48:session_4",
+        "conv-48:session_29",
+        "conv-48:session_20",
+        "conv-48:session_23",
+        "conv-48:session_16",
+        "conv-48:session_4",
+        "conv-48:session_14",
+        "conv-48:session_30"
+      ],
+      "hypothesis": "That's awesome, Deborah! What were some of your favorite memories with your mom at this spot? It looks super peaceful and pretty.",
+      "error": null,
+      "elapsed_s": 8.891759000001912,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q2",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_1"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_1",
+        "conv-48:session_2",
+        "conv-48:session_4",
+        "conv-48:session_1",
+        "conv-48:session_2",
+        "conv-48:session_19",
+        "conv-48:session_22",
+        "conv-48:session_23",
+        "conv-48:session_2",
+        "conv-48:session_16"
+      ],
+      "hypothesis": "Sorry about your loss, Deb. My mother also passed away last year. This is my room in her house, I also have many memories there. Is there anything special about it you remember?",
+      "error": null,
+      "elapsed_s": 8.916149415999826,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q215",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_16"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_16",
+        "conv-48:session_28",
+        "conv-48:session_14",
+        "conv-48:session_28",
+        "conv-48:session_16",
+        "conv-48:session_28",
+        "conv-48:session_4",
+        "conv-48:session_16",
+        "conv-48:session_2",
+        "conv-48:session_16"
+      ],
+      "hypothesis": "They can really provide love and comfort, especially during tough times. How did you come to have Susie?",
+      "error": null,
+      "elapsed_s": 9.021827625001606,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q28",
+      "question_type": "category_3",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-48:session_4"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_2",
+        "conv-48:session_26",
+        "conv-48:session_22",
+        "conv-48:session_20",
+        "conv-48:session_6",
+        "conv-48:session_13",
+        "conv-48:session_23",
+        "conv-48:session_2",
+        "conv-48:session_6",
+        "conv-48:session_14"
+      ],
+      "hypothesis": "Yeah, Jolene. She'd sit there every night with a book and a smile, reading was one of her hobbies. It was one of her favorite places in the house.",
+      "error": null,
+      "elapsed_s": 9.2728479590005,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q54",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_16",
+        "conv-48:session_2"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_28",
+        "conv-48:session_16",
+        "conv-48:session_8",
+        "conv-48:session_28",
+        "conv-48:session_28",
+        "conv-48:session_16",
+        "conv-48:session_14",
+        "conv-48:session_26",
+        "conv-48:session_2",
+        "conv-48:session_7"
+      ],
+      "hypothesis": "Hey, that's Susie or Seraphim? How long has he been hanging out with you?",
+      "error": null,
+      "elapsed_s": 9.006260124999244,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q60",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_21"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_21",
+        "conv-48:session_30",
+        "conv-48:session_16",
+        "conv-48:session_19",
+        "conv-48:session_17",
+        "conv-48:session_1",
+        "conv-48:session_29",
+        "conv-48:session_16",
+        "conv-48:session_23",
+        "conv-48:session_22"
+      ],
+      "hypothesis": "Hey Jolene! Good to hear from you! A lot's happened since we talked - last week I got to go to this yoga retreat near my mom's place. It was so cool - I got to hang with nature and really get to know myself. Definitely life-changing! That's how beautiful it was there!",
+      "error": null,
+      "elapsed_s": 8.837583499996981,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-48:q91",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 681,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-48:session_11"
+      ],
+      "retrieved_sessions": [
+        "conv-48:session_11",
+        "conv-48:session_28",
+        "conv-48:session_7",
+        "conv-48:session_11",
+        "conv-48:session_20",
+        "conv-48:session_26",
+        "conv-48:session_16",
+        "conv-48:session_23",
+        "conv-48:session_13",
+        "conv-48:session_22"
+      ],
+      "hypothesis": "I find instrumental tracks with mellow melodies and rhythms help create a peaceful vibe. One of my favorites is a track called \"Savana.\" What songs/artists do you like listening to during your practice?",
+      "error": null,
+      "elapsed_s": 8.828972375002195,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q12",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_2"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_2",
+        "conv-49:session_7",
+        "conv-49:session_11",
+        "conv-49:session_7",
+        "conv-49:session_2",
+        "conv-49:session_17",
+        "conv-49:session_15",
+        "conv-49:session_24",
+        "conv-49:session_6",
+        "conv-49:session_12"
+      ],
+      "hypothesis": "Thanks, Evan. Appreciate the offer, but had a check-up with my doctor a few days ago and, yikes, the weight wasn't great. It was pretty eye-opening.",
+      "error": null,
+      "elapsed_s": 6.6006009170014295,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q122",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-49:session_14"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_20",
+        "conv-49:session_16",
+        "conv-49:session_3",
+        "conv-49:session_2",
+        "conv-49:session_11",
+        "conv-49:session_7",
+        "conv-49:session_5",
+        "conv-49:session_10",
+        "conv-49:session_23",
+        "conv-49:session_17"
+      ],
+      "hypothesis": "Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "error": null,
+      "elapsed_s": 6.58987787499791,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q125",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_15"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_15",
+        "conv-49:session_4",
+        "conv-49:session_15",
+        "conv-49:session_21",
+        "conv-49:session_24",
+        "conv-49:session_16",
+        "conv-49:session_2",
+        "conv-49:session_8",
+        "conv-49:session_1",
+        "conv-49:session_1"
+      ],
+      "hypothesis": "Wow, Evan, you look great! How did you manage the change?",
+      "error": null,
+      "elapsed_s": 6.585340458997962,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q129",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_18"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_18",
+        "conv-49:session_18",
+        "conv-49:session_24",
+        "conv-49:session_22",
+        "conv-49:session_8",
+        "conv-49:session_1",
+        "conv-49:session_1",
+        "conv-49:session_18",
+        "conv-49:session_7",
+        "conv-49:session_1"
+      ],
+      "hypothesis": "Hey Sam, good to hear from you. I've hit a bit of a snag - my new Prius, the one I just bought, broke down. It's a bit of a stressor since I rely on it for my active lifestyle and road trips. It's frustrating when new things go awry so soon.",
+      "error": null,
+      "elapsed_s": 6.683172166998702,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q138",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_21"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_7",
+        "conv-49:session_20",
+        "conv-49:session_16",
+        "conv-49:session_6",
+        "conv-49:session_17",
+        "conv-49:session_10",
+        "conv-49:session_23",
+        "conv-49:session_7",
+        "conv-49:session_24",
+        "conv-49:session_21"
+      ],
+      "hypothesis": "Thanks, Sam. His ankle is getting better, but still sore. It was rough at first, but thank goodness it was nothing serious.",
+      "error": null,
+      "elapsed_s": 6.752382458998909,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q149",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_24"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_24",
+        "conv-49:session_24",
+        "conv-49:session_24",
+        "conv-49:session_24",
+        "conv-49:session_4",
+        "conv-49:session_20",
+        "conv-49:session_25",
+        "conv-49:session_7",
+        "conv-49:session_16",
+        "conv-49:session_20"
+      ],
+      "hypothesis": "What advice are you planning to get from the doctor?",
+      "error": null,
+      "elapsed_s": 6.853072834001068,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q16",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_22",
+        "conv-49:session_3"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_22",
+        "conv-49:session_20",
+        "conv-49:session_3",
+        "conv-49:session_22",
+        "conv-49:session_5",
+        "conv-49:session_6",
+        "conv-49:session_23",
+        "conv-49:session_24",
+        "conv-49:session_7",
+        "conv-49:session_16"
+      ],
+      "hypothesis": "Thanks, Evan! I'll give these a try. They look yum. Your help means a lot to me. Btw you know what? I went to the store again and, unsurprisingly, had issues with the self-checkout. It's becoming a regular annoyance.",
+      "error": null,
+      "elapsed_s": 6.767086957999709,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q20",
+      "question_type": "category_3",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_14",
+        "conv-49:session_2",
+        "conv-49:session_3",
+        "conv-49:session_4",
+        "conv-49:session_5",
+        "conv-49:session_7",
+        "conv-49:session_8",
+        "conv-49:session_9"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_14",
+        "conv-49:session_16",
+        "conv-49:session_23",
+        "conv-49:session_4",
+        "conv-49:session_22",
+        "conv-49:session_23",
+        "conv-49:session_5",
+        "conv-49:session_8",
+        "conv-49:session_15",
+        "conv-49:session_23"
+      ],
+      "hypothesis": "Definitely, Sam! Hiking is an awesome way to bond with nature and push ourselves. It's gonna be a cool memory for us both. It's great to see progress, was just at the gym yesterday. Gaining strength!",
+      "error": null,
+      "elapsed_s": 6.6185255829987,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q22",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-49:session_5"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_24",
+        "conv-49:session_15",
+        "conv-49:session_21",
+        "conv-49:session_13",
+        "conv-49:session_4",
+        "conv-49:session_13",
+        "conv-49:session_25",
+        "conv-49:session_12",
+        "conv-49:session_9",
+        "conv-49:session_2"
+      ],
+      "hypothesis": "Uh oh, Evan! That's awkward. Did anyone get mad at you? Are you okay?",
+      "error": null,
+      "elapsed_s": 6.672186708998197,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q28",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_11",
+        "conv-49:session_6"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_5",
+        "conv-49:session_16",
+        "conv-49:session_4",
+        "conv-49:session_11",
+        "conv-49:session_4",
+        "conv-49:session_6",
+        "conv-49:session_11",
+        "conv-49:session_7",
+        "conv-49:session_23",
+        "conv-49:session_2"
+      ],
+      "hypothesis": "Woah. such a nice view! Thanks, Sam! She's definitely great. Every moment with her is really fun and energizing. It's a nice change, especially after dealing with health issues. But you never know what life's gonna throw at you. Btw look what life has thrown for me right now haha.",
+      "error": null,
+      "elapsed_s": 6.654778749998513,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q43",
+      "question_type": "category_3",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-49:session_12",
+        "conv-49:session_2",
+        "conv-49:session_7"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_16",
+        "conv-49:session_5",
+        "conv-49:session_3",
+        "conv-49:session_17",
+        "conv-49:session_3",
+        "conv-49:session_8",
+        "conv-49:session_5",
+        "conv-49:session_13",
+        "conv-49:session_5",
+        "conv-49:session_4"
+      ],
+      "hypothesis": "Wow, Sam! You've come such a long way. It's exciting to see what comes next for you in your quest for better health.",
+      "error": null,
+      "elapsed_s": 6.704854374998831,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q62",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_14",
+        "conv-49:session_17",
+        "conv-49:session_3"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_4",
+        "conv-49:session_17",
+        "conv-49:session_16",
+        "conv-49:session_2",
+        "conv-49:session_25",
+        "conv-49:session_24",
+        "conv-49:session_5",
+        "conv-49:session_17",
+        "conv-49:session_24",
+        "conv-49:session_3"
+      ],
+      "hypothesis": "That's awesome, Evan! What do you think made the biggest impact on your health journey?",
+      "error": null,
+      "elapsed_s": 6.7155833750002785,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q72",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-49:session_20",
+        "conv-49:session_22"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_20",
+        "conv-49:session_16",
+        "conv-49:session_10",
+        "conv-49:session_21",
+        "conv-49:session_17",
+        "conv-49:session_15",
+        "conv-49:session_4",
+        "conv-49:session_17",
+        "conv-49:session_3",
+        "conv-49:session_4"
+      ],
+      "hypothesis": "Hey Sam, what's up? Long time no see, huh? Lots has happened.",
+      "error": null,
+      "elapsed_s": 6.630724665999878,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-49:q86",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 509,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-49:session_1"
+      ],
+      "retrieved_sessions": [
+        "conv-49:session_21",
+        "conv-49:session_20",
+        "conv-49:session_25",
+        "conv-49:session_23",
+        "conv-49:session_21",
+        "conv-49:session_24",
+        "conv-49:session_24",
+        "conv-49:session_23",
+        "conv-49:session_23",
+        "conv-49:session_19"
+      ],
+      "hypothesis": "That's awesome, Evan! Finding that kind of connection must feel really liberating. Love can be so powerful, huh?",
+      "error": null,
+      "elapsed_s": 6.689398957998492,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q120",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-50:session_22"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_13",
+        "conv-50:session_4",
+        "conv-50:session_22",
+        "conv-50:session_9",
+        "conv-50:session_12",
+        "conv-50:session_20",
+        "conv-50:session_4",
+        "conv-50:session_28",
+        "conv-50:session_26",
+        "conv-50:session_25"
+      ],
+      "hypothesis": "That's awesome, Dave! Pursuing your passion for auto engineering and making a custom car is a great experience. I'm excited to see what you create. Keep it up and have fun every step of the way. What do you think is the most thrilling part of it?",
+      "error": null,
+      "elapsed_s": 7.4333677499998885,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q139",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-50:session_26"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_3",
+        "conv-50:session_21",
+        "conv-50:session_24",
+        "conv-50:session_3",
+        "conv-50:session_26",
+        "conv-50:session_2",
+        "conv-50:session_15",
+        "conv-50:session_25",
+        "conv-50:session_12",
+        "conv-50:session_30"
+      ],
+      "hypothesis": "Wow, Calvin, sounds great! What did you learn from it?",
+      "error": null,
+      "elapsed_s": 7.3464337090008485,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q141",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-50:session_27"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_24",
+        "conv-50:session_30",
+        "conv-50:session_27",
+        "conv-50:session_29",
+        "conv-50:session_30",
+        "conv-50:session_27",
+        "conv-50:session_30",
+        "conv-50:session_15",
+        "conv-50:session_9",
+        "conv-50:session_6"
+      ],
+      "hypothesis": "Thanks, Dave! That pic was taken in Tokyo during a concert. Man, the energy was nuts - felt like the whole city came out!",
+      "error": null,
+      "elapsed_s": 7.28836500000034,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q151",
+      "question_type": "category_4",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-50:session_30"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_3",
+        "conv-50:session_3",
+        "conv-50:session_24",
+        "conv-50:session_15",
+        "conv-50:session_18",
+        "conv-50:session_21",
+        "conv-50:session_28",
+        "conv-50:session_20",
+        "conv-50:session_7",
+        "conv-50:session_8"
+      ],
+      "hypothesis": "Wow, Calvin, sounds great! What did you learn from it?",
+      "error": null,
+      "elapsed_s": 7.26875070800088,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q166",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-50:session_9"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_24",
+        "conv-50:session_3",
+        "conv-50:session_7",
+        "conv-50:session_25",
+        "conv-50:session_15",
+        "conv-50:session_24",
+        "conv-50:session_7",
+        "conv-50:session_9",
+        "conv-50:session_24",
+        "conv-50:session_15"
+      ],
+      "hypothesis": "Thanks, Dave! The tour has been great, the energy from the crowd is awesome and jamming with Frank Ocean is a dream come true. It's been amazing!",
+      "error": null,
+      "elapsed_s": 7.440391916999943,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q167",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-50:session_11"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_11",
+        "conv-50:session_30",
+        "conv-50:session_28",
+        "conv-50:session_24",
+        "conv-50:session_16",
+        "conv-50:session_21",
+        "conv-50:session_20",
+        "conv-50:session_29",
+        "conv-50:session_2",
+        "conv-50:session_6"
+      ],
+      "hypothesis": "Wow, Calvin, that's great! It must be an exciting process of self-discovery and growth to experiment with different genres. Does moving between styles present any challenges?",
+      "error": null,
+      "elapsed_s": 7.582519625000714,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q178",
+      "question_type": "category_5",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-50:session_17"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_30",
+        "conv-50:session_28",
+        "conv-50:session_23",
+        "conv-50:session_29",
+        "conv-50:session_28",
+        "conv-50:session_12",
+        "conv-50:session_2",
+        "conv-50:session_18",
+        "conv-50:session_17",
+        "conv-50:session_20"
+      ],
+      "hypothesis": "Thanks, Calvin! It's incredible how much emotion and beauty nature can convey through a photo.",
+      "error": null,
+      "elapsed_s": 7.510514083001908,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q25",
+      "question_type": "category_2",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": true,
+        "5": true,
+        "10": true
+      },
+      "evidence_sessions": [
+        "conv-50:session_15"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_15",
+        "conv-50:session_2",
+        "conv-50:session_15",
+        "conv-50:session_15",
+        "conv-50:session_9",
+        "conv-50:session_4",
+        "conv-50:session_7",
+        "conv-50:session_24",
+        "conv-50:session_14",
+        "conv-50:session_28"
+      ],
+      "hypothesis": "Hey Dave! Great to hear from you, card night sounds like a blast! Always love having fun with friends. Guess what? I scored a deal to continue collaboration with Frank Ocean! This is a dream come true for me, I've been working hard and it's finally paying off. No words can describe how happy I am.",
+      "error": null,
+      "elapsed_s": 7.506251499999053,
+      "extra": {}
+    },
+    {
+      "question_id": "conv-50:q40",
+      "question_type": "category_1",
+      "abstention": false,
+      "n_indexed": 568,
+      "n_retrieved": 10,
+      "recall": {
+        "1": false,
+        "5": false,
+        "10": false
+      },
+      "evidence_sessions": [
+        "conv-50:session_20"
+      ],
+      "retrieved_sessions": [
+        "conv-50:session_28",
+        "conv-50:session_21",
+        "conv-50:session_3",
+        "conv-50:session_2",
+        "conv-50:session_8",
+        "conv-50:session_27",
+        "conv-50:session_28",
+        "conv-50:session_28",
+        "conv-50:session_25",
+        "conv-50:session_24"
+      ],
+      "hypothesis": "Cool, Calvin! Music really helps me focus and be productive. When I'm doing my car stuff, I listen to vinyl to relax and stay on track.",
+      "error": null,
+      "elapsed_s": 6.271175874997425,
+      "extra": {}
+    }
+  ]
+}
