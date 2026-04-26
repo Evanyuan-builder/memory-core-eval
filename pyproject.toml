@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "memory-core-eval"
-version = "0.1.0"
+version = "0.2.0"
 description = "Reproducible evaluation harness for agent memory systems (LongMemEval and beyond)."
 readme = "README.md"
 requires-python = ">=3.10"
