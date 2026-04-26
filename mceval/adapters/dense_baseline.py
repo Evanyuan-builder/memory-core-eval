@@ -11,6 +11,7 @@ from __future__ import annotations
 import threading
 import uuid
 from collections import defaultdict
+from datetime import datetime
 
 from .base import Memory, Turn
 
@@ -57,7 +58,14 @@ class DenseBaselineAdapter:
                 self._vecs[namespace] = np.vstack([existing, vec])
         return mem_id
 
-    def search(self, namespace: str, query: str, top_k: int) -> list[Memory]:
+    def search(
+        self,
+        namespace: str,
+        query: str,
+        top_k: int,
+        as_of_date: datetime | None = None,
+    ) -> list[Memory]:
+        del as_of_date
         with self._lock:
             entries = list(self._corpus.get(namespace, []))
             vecs = self._vecs.get(namespace)

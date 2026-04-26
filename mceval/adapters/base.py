@@ -63,8 +63,18 @@ class MemoryAdapter(Protocol):
         """Index *turn* under *namespace*. Return the adapter's memory id."""
         ...
 
-    def search(self, namespace: str, query: str, top_k: int) -> list[Memory]:
+    def search(
+        self,
+        namespace: str,
+        query: str,
+        top_k: int,
+        as_of_date: datetime | None = None,
+    ) -> list[Memory]:
         """Return the top_k most relevant memories in *namespace* for *query*.
+
+        ``as_of_date`` is the reference point for resolving relative temporal
+        expressions in *query* ("N days ago", "last Tuesday", "yesterday").
+        Adapters that don't model time should ignore it.
 
         Ordering is the adapter's responsibility. The harness only reads the
         returned list as-is; it does not re-rank.

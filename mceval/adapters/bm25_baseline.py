@@ -8,6 +8,7 @@ from __future__ import annotations
 import re
 import uuid
 from collections import defaultdict
+from datetime import datetime
 
 from rank_bm25 import BM25Okapi
 
@@ -39,7 +40,15 @@ class BM25BaselineAdapter:
         self._dirty[namespace] = True
         return mem_id
 
-    def search(self, namespace: str, query: str, top_k: int) -> list[Memory]:
+    def search(
+        self,
+        namespace: str,
+        query: str,
+        top_k: int,
+        as_of_date: datetime | None = None,
+    ) -> list[Memory]:
+        # BM25 baseline is time-agnostic by design; ignore as_of_date.
+        del as_of_date
         if self._dirty.get(namespace, False):
             self._rebuild(namespace)
         idx = self._index.get(namespace)

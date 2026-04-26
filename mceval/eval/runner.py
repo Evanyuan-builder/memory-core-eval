@@ -21,6 +21,7 @@ from mceval.datasets.longmemeval import (
     evidence_session_ids,
     is_abstention,
     iter_turns,
+    parse_longmemeval_date,
 )
 
 from .metrics import compute_metrics
@@ -53,14 +54,17 @@ def _evaluate_one(
     t0 = time.perf_counter()
     adapter.reset(ns)
 
+    question_date = parse_longmemeval_date(item.get("question_date"))
+
     stored: list[Turn] = []
-    for sid, s_idx, t_idx, role, content in iter_turns(item):
+    for sid, s_idx, t_idx, role, content, session_date in iter_turns(item):
         turn = Turn(
             content=content,
             role=role,
             session_id=sid,
             turn_idx=t_idx,
             session_idx=s_idx,
+            timestamp=session_date,
         )
         try:
             adapter.store(ns, turn)
@@ -82,7 +86,9 @@ def _evaluate_one(
             elapsed_s=time.perf_counter() - t0,
         )
     else:
-        retrieved: list[Memory] = adapter.search(ns, question, top_k=max(top_k_values))
+        retrieved: list[Memory] = adapter.search(
+            ns, question, top_k=max(top_k_values), as_of_date=question_date
+        )
         result = score(
             question_id=qid,
             question_type=q_type,
@@ -111,6 +117,7 @@ def run_eval(
     workers: int = 4,
     on_progress: Optional[Callable[[int, int, QuestionResult], None]] = None,
     trace_writer: Optional[TraceWriter] = None,
+    dataset_name: str = "longmemeval-oracle",
 ) -> EvalOutput:
     top_k_values = top_k_values or DEFAULT_TOP_K_VALUES
     t_start = time.perf_counter()
@@ -140,7 +147,7 @@ def run_eval(
         meta={
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "adapter": getattr(adapter, "name", type(adapter).__name__),
-            "dataset": "longmemeval-oracle",
+            "dataset": dataset_name,
             "granularity": "turn-level",
             "n_questions": n,
             "top_k_values": top_k_values,

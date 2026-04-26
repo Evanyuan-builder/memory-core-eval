@@ -11,6 +11,7 @@ retrievers accumulates two rank contributions.
 from __future__ import annotations
 
 from collections import defaultdict
+from datetime import datetime
 from typing import Optional
 
 from .base import Memory, Turn
@@ -44,9 +45,15 @@ class HybridRRFBaselineAdapter:
         self._dense.store(namespace, turn)
         return mem_id
 
-    def search(self, namespace: str, query: str, top_k: int) -> list[Memory]:
-        bm25_hits = self._bm25.search(namespace, query, self.retrieval_k)
-        dense_hits = self._dense.search(namespace, query, self.retrieval_k)
+    def search(
+        self,
+        namespace: str,
+        query: str,
+        top_k: int,
+        as_of_date: datetime | None = None,
+    ) -> list[Memory]:
+        bm25_hits = self._bm25.search(namespace, query, self.retrieval_k, as_of_date=as_of_date)
+        dense_hits = self._dense.search(namespace, query, self.retrieval_k, as_of_date=as_of_date)
 
         scores: dict[str, float] = defaultdict(float)
         seen: dict[str, Memory] = {}

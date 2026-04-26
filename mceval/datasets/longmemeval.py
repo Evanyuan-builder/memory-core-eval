@@ -18,7 +18,9 @@ import hashlib
 import json
 import os
 import random
+import re
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable
 
@@ -154,18 +156,52 @@ def _stratified_sample(data: list[dict], n: int, seed: int) -> list[dict]:
     return out
 
 
-def iter_turns(item: dict) -> Iterable[tuple[str, int, int, str, str]]:
-    """Yield (session_id, session_idx, turn_idx, role, content) for each turn
-    in a LongMemEval question's haystack.
+_LME_DATE_RE = re.compile(
+    r"^\s*(\d{4})/(\d{1,2})/(\d{1,2})\s*(?:\([A-Za-z]+\))?\s*(\d{1,2}):(\d{2})"
+)
+
+
+def parse_longmemeval_date(raw: str | None) -> datetime | None:
+    """Parse LongMemEval timestamp strings like ``2023/10/03 (Tue) 19:00``.
+
+    Returns a timezone-aware UTC datetime, or None when parsing fails.
+    LongMemEval timestamps are naive wall-clock; we pin them to UTC so they
+    round-trip through the Memory Core API's datetime fields.
+    """
+    if not raw:
+        return None
+    m = _LME_DATE_RE.match(raw)
+    if not m:
+        return None
+    y, mo, d, hh, mm = (int(x) for x in m.groups())
+    try:
+        return datetime(y, mo, d, hh, mm, tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def iter_turns(
+    item: dict,
+) -> Iterable[tuple[str, int, int, str, str, datetime | None]]:
+    """Yield ``(session_id, session_idx, turn_idx, role, content, session_date)``
+    for each turn in a LongMemEval question's haystack.
+
+    ``session_date`` comes from ``haystack_dates[session_idx]`` when present —
+    all turns within a session share the same timestamp (LongMemEval does not
+    record per-turn times). Consumers that don't care about time can ignore
+    the last element.
     """
     sessions = item.get("haystack_sessions", [])
     session_ids = item.get("haystack_session_ids", [])
+    session_dates = item.get("haystack_dates", [])
     for s_idx, session in enumerate(sessions):
         sid = str(session_ids[s_idx]) if s_idx < len(session_ids) else str(s_idx)
+        raw_date = session_dates[s_idx] if s_idx < len(session_dates) else None
+        session_date = parse_longmemeval_date(raw_date)
         for t_idx, turn in enumerate(session):
             content = (turn.get("content") or "").strip()
             if content:
-                yield sid, s_idx, t_idx, turn.get("role", "user"), content
+                yield sid, s_idx, t_idx, turn.get("role", "user"), content, session_date
 
 
 def evidence_session_ids(item: dict) -> set[str]:
