@@ -1,7 +1,9 @@
 # Memory Core Evaluation Report
 
-**Memory Core v0.3.0** — `Evanyuan-builder/memory-core@54a20e7`
-**Harness** — `memory-core-eval@6c01b68` (this repo, public, Apache-2.0)
+**Memory Core** — `Evanyuan-builder/memory-core@5e23039`
+(post-v0.3.0; includes the bug-#6 composite temporal_factor fix
+described in the Lessons section)
+**Harness** — `memory-core-eval@6585e14` (this repo, public, Apache-2.0)
 **Date** — 2026-04-27
 
 This report measures Memory Core's retrieval performance on two
