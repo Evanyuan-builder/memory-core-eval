@@ -40,5 +40,23 @@ Issues = "https://github.com/Evanyuan-builder/memory-core-eval/issues"
 [tool.hatch.build.targets.wheel]
 packages = ["mceval"]
 
+[tool.hatch.build.targets.sdist]
+# Explicitly include only the public surface — the package, its tests,
+# top-level configs/docs, and the canonical (tracked) baseline JSONs.
+# Lab-note experimental baselines under baselines/_archive/ are local
+# history, not part of the published distribution.
+include = [
+    "mceval/",
+    "tests/",
+    "configs/",
+    "docs/",
+    "reports/",
+    "traces/sample_50/",
+    "baselines/*.json",
+    "README.md",
+    "LICENSE",
+    "pyproject.toml",
+]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
