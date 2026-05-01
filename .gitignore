@@ -19,6 +19,12 @@ results/*.jsonl
 !traces/sample_50/*.jsonl
 !baselines/**/*.json
 
+# Local lab-note baselines: experimental runs kept on disk for
+# reference but not tracked. Per the c0caf51 convention, only the
+# canonical baseline JSONs at the top level of baselines/ are
+# committed; everything under _archive/ is local history.
+baselines/_archive/
+
 .DS_Store
 .idea/
 .vscode/
