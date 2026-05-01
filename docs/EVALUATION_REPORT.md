@@ -1,10 +1,10 @@
 # Memory Core Evaluation Report
 
-**Memory Core** — `Evanyuan-builder/memory-core@5e23039`
-(post-v0.3.0; includes the bug-#6 composite temporal_factor fix
-described in the Lessons section)
+**Memory Core** — `Evanyuan-builder/memory-core@ae1352d` (v0.3.1;
+includes the bug-#6 composite temporal_factor fix and the bug-#7
+schema-completeness fix described in the Lessons section)
 **Harness** — `memory-core-eval@6585e14` (this repo, public, Apache-2.0)
-**Date** — 2026-04-27
+**Date** — 2026-04-27 (numbers); 2026-05-01 (v0.3.1 schema annotations)
 
 This report measures Memory Core's retrieval performance on two
 public agent-memory benchmarks (LoCoMo and LongMemEval-S) at the
@@ -426,7 +426,7 @@ File a reproduction-divergence issue if you hit it.
 
 ---
 
-## Lessons (the failure-to-fix journal that shaped v0.3.0)
+## Lessons (the failure-to-fix journal that shaped v0.3.x)
 
 This section is here because the most credible thing an
 infrastructure project can publish is *what we found broken in our
@@ -436,7 +436,8 @@ The release leading up to v0.3.0 surfaced five real bugs that the
 benchmark numbers above were silent on. They were caught by the
 upper-layer maintenance machinery (gc / consolidate) and by
 concurrent-store production paths — exactly the surfaces a pure
-recall benchmark does not exercise.
+recall benchmark does not exercise. Two more (#6, #7) landed in
+the v0.3.1 cycle.
 
 | # | Bug | Where it would have hit production | Fix |
 |---|---|---|---|
@@ -446,6 +447,7 @@ recall benchmark does not exercise.
 | 4 | `_get_table` first-creation race (5 concurrent stores → 4 with "table already exists") | Same SDK pattern, but at first-store-into-fresh-namespace | `54a20e7` — extend the lock to cover cache-fill |
 | 5 | Backend-name assertions hard-coded to `"mcp-memory-service"` across 5 test files | Any backend swap would surface as a fake test failure | `3ec6a56` + `161cf69` — assertions made backend-agnostic |
 | 6 | Composite ranker's `exp(-age_days/30)` collapsed to FP-noise on memories with historical timestamps | Any production replay or backfill against an old corpus would silently break ranking | `5e23039` — floor temporal_factor + skip when `as_of_date` provided |
+| 7 | Four MemoryUnit fields (`layer`, `is_entity_page`, `temporal`, `relations`) were never declared in the LanceDB schema, so store→retrieve silently reset them to defaults | autoDream entity pages, Graphiti graph edges, and bi-temporal supersede policy were all reading defaults instead of the values upstream populated | `ae1352d` — add columns + flattened bi-temporal layout + JSON-encoded relations + add_columns auto-migration for v0.3.0 tables |
 
 Bug #6 is special: it was found *while writing this very report*.
 The CE-off ablation row was supposed to be a routine measurement of
@@ -457,6 +459,20 @@ The lesson — *the act of writing receipts is itself a bug-finder*
 — is one of the strongest arguments we can offer for the
 "evaluation-first, with public ablations" practice this report is
 trying to establish.
+
+Bug #7 is the inverse twin of #6. It was found by *audit*: a
+field-by-field compare of `MemoryUnit` (the model) against
+`_make_schema` (the LanceDB column list). Four fields — `layer`,
+`is_entity_page`, `temporal`, `relations` — were declared on the
+model but absent from the schema, so the adapter silently dropped
+them on every write. The benchmark numbers in this report did not
+move when v0.3.1 fixed it, *because the eval data does not populate
+any of those four fields to begin with*. R@10 = 88.8 / 99.4 holds at
+v0.3.1; the schema fix surfaces only on production paths
+(autoDream's entity pages, Graphiti relations, bi-temporal
+supersede policy). The lesson is symmetrical to #6 — *the act of
+auditing receipts against the model is itself a bug-finder, and
+some bug classes can never be detected by recall benchmarks alone*.
 
 A separate prior incident, the **"87 mirage"** of 2026-04-26, is
 worth its own paragraph. A morning tuning experiment showed LoCoMo
@@ -477,7 +493,7 @@ afford.
 
 ## Repository links
 
-- Implementation: https://github.com/Evanyuan-builder/memory-core (pinned at v0.3.0)
+- Implementation: https://github.com/Evanyuan-builder/memory-core (pinned at v0.3.1)
 - Eval harness (this repo): https://github.com/Evanyuan-builder/memory-core-eval (v0.2.0)
 - Canonical baseline JSONs (this repo): `baselines/memory-core_2026-04-27_*.json`
 
@@ -490,5 +506,5 @@ own adapter into the harness? Open an issue at
 `Evanyuan-builder/memory-core-eval`. Memory Core itself remains
 focused on the *deterministic temporal memory for agent teams*
 narrative; this report is one of two artefacts (the other being
-the v0.3.0 release notes) that translates the code into something
+the v0.3.1 release notes) that translates the code into something
 a third party can verify.
