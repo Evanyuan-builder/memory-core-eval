@@ -114,7 +114,7 @@ MEMORY_DIVERSITY_OVERFETCH        = 4
 MEMORY_OVERFETCH_CAP              = 40
 MEMORY_CE_RERANK_TOP_N            = 40
 MEMORY_CE_RERANK_ENABLED          = auto-on (sentence-transformers installed)
-MEMORY_COMPOSITE_RANKING_ENABLED  = 1 (default, no-op on eval data — see Ablations)
+MEMORY_COMPOSITE_RANKING_ENABLED  = 0 (Phase-3 default; on via the knowledge preset — no-op on eval data either way, see Ablations)
 MEMORY_DIVERSITY_GROUP_CAP        = 0  (off)
 MEMORY_PREFERENCE_INTENT_ENABLED  = 0  (off)
 LANCEDB_PRIMARY                   = true
@@ -408,14 +408,19 @@ interpretation:
 3. **Independent reproduction not performed.** The reproduction
    recipe below is exactly what we ran; a third-party rerun is the
    credibility-multiplying next step.
-4. **Composite ranking is default-on but no-op on eval.** The
-   design intent is that composite multiplies in production-only
-   signals (`autoDream`-emitted credibility, entity-page
-   activation, path-glob match, relation graph). On benchmark data
-   none of these are present, so composite is mathematically
-   identity. We have not yet split composite into a preset-attached
-   layer (so the default path is paper-baseline-shaped) — it is
-   tracked as the next refactor.
+4. **Composite ranking — now default-off, preset-attached
+   (resolved).** Composite multiplies in production-only signals
+   (`autoDream`-emitted credibility, entity-page activation,
+   path-glob match, relation graph); on benchmark data none are
+   present, so it was mathematically identity. As of the Phase-3
+   re-layering it is **off by default** and attached to the
+   `knowledge` preset, so the default search path is
+   paper-baseline-shaped (raw hybrid + RRF + the independent opt-in
+   CE/diversity/path layers). `explain=True` still returns the full
+   signal trace on the default path via a trace-only mode that
+   computes signals without re-sorting. The headline numbers above
+   are unchanged by this flip (composite was already no-op on eval;
+   re-confirmed at LoCoMo n=100 = 87.0).
 5. **Lancedb is pinned to 0.10.x.** A 0.30 upgrade is queued; the
    FTS query API, null int64 handling, and schema-evolution
    semantics all changed across the 0.10 → 0.30 line and need
