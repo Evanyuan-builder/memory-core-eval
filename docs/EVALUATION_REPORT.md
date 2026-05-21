@@ -1,17 +1,21 @@
 # Memory Core Evaluation Report
 
-**Memory Core** — `Evanyuan-builder/memory-core@ae1352d` (v0.3.1;
-includes the bug-#6 composite temporal_factor fix and the bug-#7
-schema-completeness fix described in the Lessons section)
-**Harness** — `memory-core-eval@6585e14` (this repo, public, Apache-2.0)
-**Date** — 2026-04-27 (numbers); 2026-05-01 (v0.3.1 schema annotations)
+**Memory Core** — headline numbers measured at
+`Evanyuan-builder/memory-core@ae1352d` (v0.3.1); **re-verified
+non-regressive at `@f6cea76`** (post-v1.0, the structured-knowledge /
+governance-gate / auto-wired-relations additions — see *Non-regression*).
+**Harness** — `memory-core-eval@HEAD` (this repo, public, Apache-2.0;
+`pip install memory-core-eval`)
+**Date** — 2026-04-27 (n=500 numbers); 2026-05-01 (v0.3.1 schema
+annotations); 2026-05-21 (v1.0 non-regression re-verification + capabilities)
 
 This report measures Memory Core's retrieval performance on two
 public agent-memory benchmarks (LoCoMo and LongMemEval-S) at the
-default-stack settings shipped in v0.3.0. It also documents
-cross-restart determinism, ablation tables, known limitations, the
-end-to-end reproduction recipe, and the dogfood-surfaced bugs that
-shaped the v0.3 release. Treat this as a primary-source snapshot,
+default-stack settings. It also documents cross-restart determinism,
+ablation tables, the capabilities that sit *beside* recall (structured
+knowledge, ingestion governance, an auto-wired relation graph), known
+limitations, the end-to-end reproduction recipe, and the dogfood-surfaced
+bugs that shaped the releases. Treat this as a primary-source snapshot,
 not a leaderboard claim — the public paper anchors below were taken
 from those papers' published baseline numbers, and a third-party
 reproduction has not yet been performed.
@@ -216,6 +220,76 @@ audits results, replays past states, or coordinates multiple agents
 sharing memory. Mem0 / Zep / Letta do not currently publish
 determinism guarantees; we treat it as a first-class property,
 verifiable in CI, with the receipts above.
+
+---
+
+## Non-regression across the v1.0 capability additions (2026-05-21)
+
+Between the n=500 measurement (`@ae1352d`) and now (`@f6cea76`), Memory
+Core gained three capabilities that touch the **write** path — structured
+knowledge fields, an ingestion governance gate, and auto-wired relation
+extraction (see *Capabilities beyond recall* below). Any change to the
+store path is a regression risk for retrieval, so we re-ran both
+benchmarks at n=100 against the new code and diffed against the canonical
+n=100 baselines.
+
+| Benchmark | n | R@1 | R@5 | R@10 | canonical (n=100) | Δ |
+|---|---:|---:|---:|---:|---|---:|
+| LoCoMo | 100 | 58.0 | 80.0 | **87.0** | 58.0 / 80.0 / 87.0 (`@eb0de8f`) | **0 / 0 / 0** |
+| LongMemEval-S | 100 | 94.7 | 97.9 | **98.9** | 94.7 / 97.9 / 98.9 (`@ae1352d`) | **0 / 0 / 0** |
+
+Bit-for-bit identical, per-category included. This is the expected and
+intended result: the three additions are orthogonal to retrieval on
+benchmark data —
+
+- **Structured fields** (`description`/`rule`/`why`/`how_to_apply`) are
+  `None` on benchmark turns, so the stored row and its ranking are
+  byte-identical.
+- **Auto-wired relations** parse `[[slug]]` / `[label](slug.md)` links;
+  conversation turns contain none, so extraction returns `[]` and the
+  `graph_factor` multiplier stays 1.0.
+- **The governance gate** screens content on the single-store endpoint;
+  the eval harness ingests via the batch endpoint, which this gate does
+  not sit on, and benchmark turns trip none of its detectors regardless.
+
+Receipts: `baselines/memory-core_2026-05-21_09-57-29_n100.json` (LoCoMo),
+`baselines/memory-core_2026-05-21_10-03-37_n100.json` (LongMemEval-S).
+The n=500 headline numbers above were not re-run at `@f6cea76`; the
+byte-identical n=100 default path is the same evidence the determinism
+section uses to argue the n=500 numbers carry forward unchanged.
+
+---
+
+## Capabilities beyond recall
+
+Recall@k is what this report measures, but it is not the whole product,
+and a hybrid BM25+dense store that returns a content blob can match the
+recall table above. Three capabilities shipped in the v1.0 line are
+*not* visible to a recall benchmark and are where Memory Core diverges
+from a flat retriever — documented here so the numbers aren't mistaken
+for the entire surface:
+
+- **Structured knowledge.** A memory carries an *executable rule* as
+  discrete fields — `rule` + `why` + `how_to_apply` — plus a one-line
+  `description`, not only a content blob. Retrieval can return the
+  structured rule and the always-on index prefers the hand-set
+  description over a content slice. This is the "store an actionable
+  rule, not a fact string" axis a BM25/dense retriever cannot express.
+- **Ingestion governance.** A zero-LLM gate screens writes for
+  high-confidence non-memory content (credentials, large fenced code
+  blocks, git-log dumps). Conservative by design — a passing commit
+  hash or short snippet is tolerated. Logs by default; rejects only
+  under an explicit `reject_on_ingest` opt-in (no silent drops).
+- **Auto-wired relation graph.** `[[slug]]` and `[label](slug.md)`
+  links in content become `MemoryRelation` edges on store, zero LLM.
+  Edges are captured with the slug as `target_ref` and resolved to the
+  target's UUID in a later pass; they round-trip through the LanceDB
+  `relations_json` column and feed the graph activation signal.
+
+These are covered by the implementation repo's unit + integration
+suites, not by this evaluation — consistent with the report's stance
+that some capability classes can never be measured by recall alone
+(the same point bugs #6 and #7 make from the failure side).
 
 ---
 
@@ -493,9 +567,9 @@ afford.
 
 ## Repository links
 
-- Implementation: https://github.com/Evanyuan-builder/memory-core (pinned at v0.3.1)
-- Eval harness (this repo): https://github.com/Evanyuan-builder/memory-core-eval (v0.2.0)
-- Canonical baseline JSONs (this repo): `baselines/memory-core_2026-04-27_*.json`
+- Implementation: https://github.com/Evanyuan-builder/memory-core (numbers pinned at v0.3.1 `@ae1352d`; non-regression re-verified at `@f6cea76`)
+- Eval harness (this repo): https://github.com/Evanyuan-builder/memory-core-eval — `pip install memory-core-eval` (PyPI)
+- Canonical baseline JSONs (this repo): `baselines/memory-core_2026-04-27_*_n500.json` (headline) and `baselines/memory-core_2026-05-21_*_n100.json` (v1.0 non-regression)
 
 ---
 
