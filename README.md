@@ -35,13 +35,18 @@ system, and compare head-to-head without trusting anyone's marketing.
 
 ## Install
 
-`memory-core-eval` is not on PyPI yet — install editable from source:
+`memory-core-eval` is on PyPI:
+
+~~~bash
+pip install memory-core-eval                # core + BM25 baseline
+pip install "memory-core-eval[dense]"       # + sentence-transformers for dense / hybrid
+~~~
+
+Or install editable from source for development:
 
 ~~~bash
 git clone https://github.com/Evanyuan-builder/memory-core-eval.git
 cd memory-core-eval
-pip install -e .                  # core + BM25 baseline
-pip install -e ".[dense]"         # + sentence-transformers for dense / hybrid
 pip install -e ".[dev]"           # + pytest, ruff
 ~~~
 
@@ -81,28 +86,28 @@ published numbers we know of for the same datasets, included so a reader can
 position the current run within that landscape.
 
 **LoCoMo** (Maharana et al. 2024) — long-range conversational memory.
-Session-level Recall@k. n=100 stratified, seed=0, top_k=10:
+Turn-level Recall@k. n=500 stratified, seed=0, top_k=10:
 
 | System | n | R@1 | R@5 | R@10 |
 |---|---:|---:|---:|---:|
 | BM25 (paper anchor) | 100 | 54.0 | 74.0 | 84.0 |
 | Hybrid-RRF (paper anchor) | 100 | 50.0 | 78.0 | 85.0 |
-| **Memory Core (current run)** | **100** | **57.0** | **80.0** | **87.0** |
+| **Memory Core** | **500** | **55.2** | **79.0** | **87.4** |
 
 **LongMemEval-S** (Wu et al. 2024) — session-haystack
-(~50 sessions / question). The Memory Core run is n=100 stratified; the paper
-anchors are at n=500. Treat the gap as suggestive until the larger sweep lands.
+(~50 sessions / question). Turn-level Recall@k. n=500 stratified, seed=0:
 
 | System | n | R@10 |
 |---|---:|---:|
 | BM25 (paper anchor) | 500 | 96.2 |
 | Hybrid-RRF (paper anchor) | 500 | 97.9 |
-| **Memory Core (current run)** | **100** | **98.9** |
+| **Memory Core** | **500** | **99.1** |
 
-Cross-restart stability is verified in reference benchmark runs. Canonical
+Reproduced on current `master` (2026-05-29; lancedb 0.10.2, workers=2,
+seed=0). Cross-restart stability is verified at a fixed revision. Canonical
 reference JSONs live under `baselines/`.
 
-LongMemEval-M and full n=500 sweeps are queued.
+The LongMemEval-M sweep is still pending.
 
 ---
 
