@@ -92,7 +92,7 @@ Turn-level Recall@k. n=500 stratified, seed=0, top_k=10:
 |---|---:|---:|---:|---:|
 | BM25 (paper anchor) | 100 | 54.0 | 74.0 | 84.0 |
 | Hybrid-RRF (paper anchor) | 100 | 50.0 | 78.0 | 85.0 |
-| **Memory Core** | **500** | **58.6** | **81.0** | **88.8** |
+| **Memory Core** | **500** | **58.6** | **82.4** | **89.0** |
 
 **LongMemEval-S** (Wu et al. 2024) — session-haystack
 (~50 sessions / question). Turn-level Recall@k. n=500 stratified, seed=0:
@@ -101,9 +101,9 @@ Turn-level Recall@k. n=500 stratified, seed=0, top_k=10:
 |---|---:|---:|
 | BM25 (paper anchor) | 500 | 96.2 |
 | Hybrid-RRF (paper anchor) | 500 | 97.9 |
-| **Memory Core** | **500** | **98.9** |
+| **Memory Core** | **500** | **99.6** |
 
-Reproduced on current `master` (2026-05-29; embedder `bge-base-en-v1.5` 768d,
+Reproduced on current `master` (2026-05-29; embedder `bge-large-en-v1.5` 1024d,
 lancedb 0.10.2, workers=2, seed=0). Cross-restart stability is verified
 (bit-identical results across server restarts). Canonical reference JSONs live
 under `baselines/`.
