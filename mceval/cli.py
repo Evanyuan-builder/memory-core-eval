@@ -32,6 +32,11 @@ def _make_hindsight(base_url=None, api_key=None, **_):
     return HindsightAdapter(base_url=base_url, api_key=api_key)
 
 
+def _make_timem(base_url=None, api_key=None, **_):
+    from mceval.adapters.timem_adapter import TiMEMAdapter
+    return TiMEMAdapter(base_url=base_url, api_key=api_key)
+
+
 def _make_mflow(base_url=None, api_key=None, **_):
     # Deferred import: mflow-ai is optional.
     from mceval.adapters.mflow import MflowAdapter
@@ -48,6 +53,7 @@ ADAPTERS: dict[str, Callable[..., MemoryAdapter]] = {
     ),
     "hindsight": _make_hindsight,
     "m-flow": _make_mflow,
+    "timem": _make_timem,
 }
 
 
